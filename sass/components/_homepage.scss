@@ -1,0 +1,97 @@
+// HERO SECTION
+.hero {
+   height: 100vh;
+   background: url('./../img/landing.jpg') no-repeat center center/cover;
+}
+
+.navbar {
+   position: fixed;
+   width: 100%;
+   padding: calc(2rem + 1vw);   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+nav ul {
+   display: flex;
+
+   a {
+      color: white;
+      margin-left: 2rem;
+
+      &:hover {
+         color: red;
+      }
+   }
+}
+
+.hero-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;
+   align-items: center;
+   text-align: center;
+   color: white;
+   padding: 0 2rem;
+
+   h1 {
+      margin-bottom: 2rem;
+   }
+
+   p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: $big-text;
+      font-weight: 300;
+   }
+
+   a {
+      margin-top: 3rem;
+   }
+}
+
+// ABOUT
+.about {
+   padding: 5rem 0;
+}
+
+.about-lead {
+   text-align: center;
+   padding-bottom: 5rem;
+
+   h3 {
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &:after {
+         content: "";
+         display: block;
+         height: 3px;
+         width: 55px;
+         background: $special-color;
+         margin: 0 auto;
+         margin-top: 25px;
+      }
+   }
+
+   p {
+      margin-top: 5rem;;
+   }
+}
+
+.features {
+   background: url('./../img/bg-black1.jpg') no-repeat center center/cover;
+   padding: 5rem;
+}
+
+.features-wrapper {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2rem;
+   
+   .feature {
+      color: $white;
+      text-align: center;
+   }
+}

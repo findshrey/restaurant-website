@@ -1,0 +1,70 @@
+// UTILITY CLASSES
+.container {
+   width: 90%;
+   max-width: 1440px;
+   // padding: 0 1.5rem;
+   margin: 0 auto;
+   // overflow: hidden;
+}
+
+.container-small {
+   width: 90%;
+   max-width: 900px;
+   margin: 0 auto;
+}
+
+.btn {
+   background: white;
+   border: 1px solid white;
+   padding: 1rem 2rem;
+   border-radius: 1px;
+   transition: 0.4s ease;
+}
+
+.btn:hover {
+   background: transparent;
+   color: $white;
+}
+
+// Buttons
+// %btn-shared {
+//    display: inline-block;
+//    padding: 0.8rem 2rem;
+//    transition: all 0.5s;
+//    border: none;
+//    cursor: pointer;
+// }
+ 
+// .btn {
+//    &-main {
+//      @extend %btn-shared;
+//      color: #333;
+//      background-color: $main-color;
+//    }
+ 
+//    &-light {
+//      @extend %btn-shared;
+//      color: #333;
+//      background-color: $light-color;
+//    }
+ 
+//    &-dark {
+//      @extend %btn-shared;
+//      color: #f4f4f4;
+//      background-color: $dark-color;
+//    }
+// }
+
+// @mixin flex($justify, $align, $direction) {
+//    display: flex;
+//    justify-content: $justify;
+//    align-items: $align;
+//    flex-direction: $direction;
+// }
+
+// Hearder Properties
+@mixin header($f-family, $f-weight, $l-spacing) {
+   font-family: $f-family;
+   font-weight: $f-weight;
+   letter-spacing: $l-spacing;
+}
