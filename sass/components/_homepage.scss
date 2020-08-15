@@ -52,13 +52,9 @@ nav ul {
 }
 
 // ABOUT
-.about {
-   padding: 5rem 0;
-}
-
 .about-lead {
    text-align: center;
-   padding-bottom: 5rem;
+   padding: calc(5rem + 1.5vw) 0;
 
    h3 {
       text-transform: uppercase;
@@ -82,16 +78,34 @@ nav ul {
 
 .features {
    background: url('./../img/bg-black1.jpg') no-repeat center center/cover;
-   padding: 5rem;
+   padding: calc(5rem + 1.5vw) calc(2rem + 1vw);
 }
 
 .features-wrapper {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   gap: 2rem;
+   gap: calc(2rem + 1vw);
    
    .feature {
       color: $white;
       text-align: center;
+      line-height: 1.8;
+
+      i {
+         font-size: 5rem;
+         color: $special-color;
+      }
+
+      h4 {
+         text-transform: uppercase;
+         font-size: $text;
+         font-weight: 700;
+         margin: calc(2rem + 0.75vw) 0;
+      }
+
+      p {
+         font-size: $small-text;
+         font-weight: 300;
+      }
    }
 }

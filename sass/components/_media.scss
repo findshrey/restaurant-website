@@ -1,6 +1,9 @@
 // TABLETS
 @media (max-width: 800px) {
-   // HERO SECTION
+   // ABOUT
+   .features-wrapper {
+      grid-template-columns: 1fr;
+   }
 
 }
 
