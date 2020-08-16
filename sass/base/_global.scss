@@ -23,11 +23,11 @@ h1 {
 }
 h2 {
    font-size: $header2;
-   @include header(('Montserrat', sans-serif), 300, 2px);
+   @include header(('Montserrat', sans-serif), 700, 3px);
 }
 h3 {
    font-size: $header3;
-   @include header(('Montserrat', sans-serif), 300, 2px);
+   @include header(('Montserrat', sans-serif), 700, 3px);
 }
 h4 {
    font-size: $header4;
