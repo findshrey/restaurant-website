@@ -22,19 +22,25 @@ h1 {
    @include header(('Montserrat', sans-serif), 400, 2px);
 }
 h2 {
+   // NOT BEING USED ANYWHERE
    font-size: $header2;
    @include header(('Montserrat', sans-serif), 700, 3px);
 }
 h3 {
    font-size: $header3;
-   @include header(('Montserrat', sans-serif), 700, 3px);
+   @include header(('Montserrat', sans-serif), 500, 2px);
 }
 h4 {
    font-size: $header4;
-   @include header(('Montserrat', sans-serif), 300, 2px);
+   @include header(('Montserrat', sans-serif), 300, 1px);
 }
 
-p, span, li, a, label, input, button {
+p, span, li, a, label, input {
+   font-size: $text;
+}
+
+button {
+   font-family: inherit;
    font-size: $text;
 }
 
@@ -46,7 +52,3 @@ a {
    text-decoration: none;
    color: $text-primary;
 }
-
-// img {
-//    width: 100%;
-// }

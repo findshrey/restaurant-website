@@ -19,9 +19,10 @@ nav ul {
    a {
       color: white;
       margin-left: 2rem;
+      font-weight: 500;
 
       &:hover {
-         color: red;
+         color: $red;
       }
    }
 }
@@ -72,7 +73,7 @@ nav ul {
       display: block;
       height: 4px;
       width: 55px;
-      background: $special-color;
+      background: $red;
       margin: 0 auto;
       margin-top: 25px;
    }
@@ -89,7 +90,7 @@ nav ul {
 
 // FEATURES SECTION
 #features {
-   background: url('./../img/bg-black1.jpg') no-repeat center center/cover;
+   background: url('./../img/bg-black-1.jpg') no-repeat center center/cover;
    padding: calc(5rem + 3vw) 0;
 
    .container {
@@ -198,7 +199,7 @@ nav ul {
       }
 
       span {
-         color: #e7272d;
+         color: $red;
       }
    }
 
@@ -228,7 +229,7 @@ nav ul {
       display: block;
       height: 4px;
       width: 55px;
-      background: $special-color;
+      background: $red;
       margin: 0 auto;
       margin-top: 25px;
    }
@@ -246,4 +247,133 @@ nav ul {
       display: block;
       width: 100%;
    }
+}
+
+// RESERVATION SECTION
+#reservation {
+   padding: calc(5rem + 3vw) 0;
+   background: url('./../img/bg-black-2.webp') no-repeat center center/cover;
+}
+
+.reservation-head {
+   text-transform: uppercase;
+   text-align: center;
+   margin-bottom: calc(5rem + 1.5vw);
+   color: darken($white, 10%);
+
+   h4 {
+      font-size: $text;
+      font-weight: 400;
+      margin-bottom: 1rem;
+   }
+
+   h3:after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 55px;
+      background: darken($white, 10%);
+      margin: 0 auto;
+      margin-top: 25px;
+   }
+}
+
+form {
+   text-align: center;
+}
+
+.form-inner {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 4rem;
+   // padding: 0 5rem;
+
+   .form-group {
+      input {
+         display: block;
+         width: 100%;
+         margin-bottom: 2.5rem;
+         padding: 1.5rem;
+         background: rgba(0, 0, 0, .33);
+         border: 1px solid #505050;
+         font-family: 'Montserrat', sans-serif;
+         font-size: $small-text;
+         color: $white;
+      }
+
+      input:focus {
+         outline: none;
+      }
+
+      input::placeholder {
+         color: darken($white, 30%);
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+         -moz-appearance: textfield;
+      }
+   }
+
+   textarea {
+      grid-column: 1 / -1;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, .33);
+      border: 1px solid #505050;
+      font-family: 'Montserrat', sans-serif;
+      font-size: $small-text;
+      color: $white;
+      resize: none;
+      margin-bottom: 5rem;
+   }
+
+   textarea:focus {
+      outline: none;
+   }
+
+   textarea::placeholder {
+      color: darken($white, 30%);
+   }
+}
+
+// FOOTER 
+.footer-upper {
+   background: #141414;
+   color: darken($white, 20%);
+   padding: calc(5rem + 1vw) 0;
+
+   .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+      // justify-items: center;
+   }
+
+   .upper-block {
+      h4 {
+         font-size: $big-text;
+         margin-bottom: 2rem;
+         font-weight: 400;
+      }
+
+      p {
+         font-size: $small-text;
+         line-height: 1.8;
+      }
+   }
+}
+
+.footer-lower {
+   background: #000;
+   color: darken($white, 20%);
+   text-align: center;
+   padding: 3rem;
 }
