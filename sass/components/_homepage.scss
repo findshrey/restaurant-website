@@ -234,3 +234,16 @@ nav ul {
    }
 }
 
+.gallery-wrapper {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 0.5rem;
+   // width: 90%;
+   max-width: 1920px;
+   margin: 0 auto;
+
+   img {
+      display: block;
+      width: 100%;
+   }
+}
