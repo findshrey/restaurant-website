@@ -51,9 +51,9 @@ nav ul {
    }
 }
 
-// ABOUT
+// ABOUT SECTION
 .about-lead {
-   padding: calc(5rem + 1.5vw) 0;
+   padding: calc(5rem + 3vw) 0;
 
    .about-head {
       text-transform: uppercase;
@@ -87,9 +87,10 @@ nav ul {
    }
 }
 
-.features {
+// FEATURES SECTION
+#features {
    background: url('./../img/bg-black1.jpg') no-repeat center center/cover;
-   padding: calc(5rem + 1.5vw) calc(2rem + 1vw);
+   padding: calc(5rem + 3vw) 0;
 
    .container {
       display: grid;
@@ -121,10 +122,10 @@ nav ul {
    }
 }
 
-// MENU
+// MENU SECTION
 #menu {
-   padding: calc(5rem + 1.5vw) 0;
-   background: url('./../img/bg-red.webp');
+   padding: calc(5rem + 3vw) 0;
+   background: url('./../img/bg-red.webp') no-repeat center center/cover;
 }
 
 .menu-head {
@@ -205,3 +206,4 @@ nav ul {
       margin-bottom: 0;
    }
 }
+
