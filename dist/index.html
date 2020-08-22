@@ -18,13 +18,16 @@
             <img src="./icons/logo2.svg" alt="">
          </div>
          <nav>
-            <ul>
+            <ul class="nav-links">
                <li><a href="#">HOME</a></li>
                <li><a href="#about">ABOUT</a></li>
                <li><a href="#menu">MENU</a></li>
                <li><a href="#gallery">GALLERY</a></li>
                <li><a href="#reservation">RESERVATION</a></li>
             </ul>
+            <div class="hamburger">
+               <i class="fas fa-bars fa-2x"></i>
+            </div>
          </nav>
       </div>
       <div class="hero-content">
@@ -46,19 +49,30 @@
                <h4>Who we are</h4>
                <h3>Exotica History</h3>
             </header>
-            <div class="about-text">
-               <p>
-                  Exotica is a Canadian Brasserie with a traditional French touch – a fitting tribute to this timeless
-                  landmark. It’s a living celebration of the riches of Canada, and the new essential restaurant in
-                  Toronto,
-                  with three dining experiences – a restaurant, bar and bakery.
-               </p>
-               <p>
-                  Exotica serves inspired plates – built with fresh ingredients from across Canada, and finessed with
-                  French
-                  mastery. The room is rich in textures and sophisticated, with big-city flair and more than a hint of
-                  country nobility. You and your esteemed peers are most welcome here.
-               </p>
+            <div class="about-content">
+               <div class="about-block">
+                  <p>
+                     Located on a then-lonesome little corner under the Williamsburg Bridge in Brooklyn, Exotica opened
+                     its doors on New Year’s Eve twenty years ago. Owners Andrew Tarlow and Mark Firth hosted and
+                     bartended and ended most nights with a hand of cards and pitcher of margaritas.
+                     <br> <br>
+                     Chef Caroline Fidanza wrote a daily menu committed to local, seasonal, sustainable foods, and built
+                     relationships with the farmers in upstate New York and surrounding regions.
+                  </p>
+                  <img src="./img/aa/8.jpg" alt="">
+               </div>
+               <div class="about-block">
+                  <img src="./img/aa/1.jpg" alt="">
+                  <p>
+                     Exotic's expansive bar, a place to sit, read, eat and watch the world go by is the
+                     centerpiece
+                     of the room, a 90 year old Pullman dining car. Warm wood and aged enamel, like being in the belly
+                     of a whale or the protected hold of a ship.
+                     <br> <br>
+                     Twenty years later Exotica has carried on
+                     the traditions of its early days. A place of occasion. A touchstone for a neighborhood.
+                  </p>
+               </div>
             </div>
          </div>
       </section>
@@ -69,26 +83,24 @@
             <div class="feature">
                <i class="fas fa-award"></i>
                <h4>100% Fresh <br> Products</h4>
-               <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or
-                  antibiotics. Good for your health, the environment, and it also tastes better!</p>
+               <p>Fresh and organic vegetables. Good for your health, and it also tastes better!</p>
             </div>
             <div class="feature">
                <i class="fas fa-utensils"></i>
                <h4>Delicious <br> Food</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit incidunt iste quasi
-                  magnam odio vel, aut voluptate quos?</p>
+               <p>Pull up a chair. Take a taste. Come join us. Life is so endlessly delicious.</p>
             </div>
             <div class="feature">
                <i class="fas fa-users"></i>
                <h4>Friendly <br> Staff</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit incidunt iste quasi
-                  magnam odio vel, aut voluptate quos?</p>
+               <!-- What helps people, helps business. -->
+               <!-- The goal as a company is to have customer service that is not just the best but legendary -->
+               <p>Our greatest asset is the customer! We treat each customer as if they are the only one!</p>
             </div>
             <div class="feature">
                <i class="fas fa-thumbs-up"></i>
                <h4>Relaxing <br> Atmosphere</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit incidunt iste quasi
-                  magnam odio vel, aut voluptate quos?</p>
+               <p>Because one cannot think well, love well, sleep well, if one has not dined well.</p>
             </div>
          </div>
       </section>
@@ -102,17 +114,131 @@
             </header>
             <div class="tabs-wrapper">
                <ul>
-                  <li>Breakfast</li>
-                  <li>Lunch</li>
-                  <li>Dinner</li>
-                  <li>Deserts</li>
+                  <li class="tab-breakfast">Breakfast</li>
+                  <li class="tab-lunch">Lunch</li>
+                  <li class="tab-dinner">Dinner</li>
+                  <li class="tab-desserts">Deserts</li>
                </ul>
             </div>
-            <div class="menu-list-wrapper">
-               <div class="menu-list">
+            <div class="menu-wrapper">
+               <div class="menu-breakfast">
                   <div class="column-1">
                      <ul class="menu-item">
+                        <li>BREAKFASTSticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
                         <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                  </div>
+                  <div class="column-2">
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="menu-lunch">
+                  <div class="column-1">
+                     <ul class="menu-item">
+                        <li>LUNCHSticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                  </div>
+                  <div class="column-2">
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="menu-dinner">
+                  <div class="column-1">
+                     <ul class="menu-item">
+                        <li>DINNERSticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                  </div>
+                  <div class="column-2">
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                     <ul class="menu-item">
+                        <li>Sticky Stem Ginger Pudding<span>$33</span></li>
+                        <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="menu-desserts active">
+                  <div class="column-1">
+                     <ul class="menu-item">
+                        <li>DESSERTSticky Stem Ginger Pudding<span>$33</span></li>
                         <li>Warm butterscotch, yoghurt ice cream and brandy tuile</li>
                      </ul>
                      <ul class="menu-item">
@@ -235,6 +361,8 @@
          </div>
       </div>
    </footer>
+
+   <script src="./js/main.js"></script>
 </body>
 
 </html>

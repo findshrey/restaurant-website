@@ -11,6 +11,11 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   z-index: 10;
+
+   .hamburger {
+      display: none;
+   }
 }
 
 nav ul {
@@ -34,7 +39,7 @@ nav ul {
    height: 100%;
    align-items: center;
    text-align: center;
-   color: white;
+   color: $white;
    padding: 0 2rem;
 
    h1 {
@@ -79,12 +84,24 @@ nav ul {
    }
 }
 
-.about-text {
-   display: flex;
-   justify-content: space-between;
-   
-   p {
-      flex-basis: 45%;
+.about-content {
+   .about-block {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+
+      img {
+         width: 100%;
+      }
+
+      p {
+         display: flex;
+         align-items: center;
+      }
+
+      &:first-child {
+         margin-bottom: 10rem;
+      }
    }
 }
 
@@ -118,8 +135,8 @@ nav ul {
    }
 
    p {
-      font-size: $small-text;
-      font-weight: 300;
+      // font-size: $small-text;
+      // font-weight: 300;
    }
 }
 
@@ -167,44 +184,53 @@ nav ul {
    }
 }
 
-.menu-list-wrapper {
+.menu-wrapper {
    background: $white;
-}
+   position: relative;
+   min-height: 45rem;
 
-.menu-list {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 6rem 5rem;
+   & > div {
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2rem 0;
 
-   .column-1,
-   .column-2 {
-      flex-basis: 45%;
-   }
-
-   .menu-item {
-      margin-bottom: 4rem;
-
-      li:first-child {
-         font-weight: 700;
-         text-transform: uppercase;
-         font-size: $small-text;
+      .column-1,
+      .column-2 {
+         flex-basis: 45%;
+         height: 100%;
          display: flex;
-         justify-content: space-between;
+         flex-direction: column;
+         justify-content: space-around;
       }
 
-      li:nth-child(2) {
-         font-size: $small-text;
-         font-style: italic;
+      .menu-item {
+         li:first-child {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: $small-text;
+            display: flex;
+            justify-content: space-between;
+         }
+
+         li:nth-child(2) {
+            font-size: $small-text;
+            font-style: italic;
+            margin-right: 5rem;
+         }
+
+         span {
+            color: $red;
+         }
       }
 
-      span {
-         color: $red;
+      &.active {
+         opacity: 1;
       }
-   }
-
-   .menu-item:last-child {
-      margin-bottom: 0;
    }
 }
 
