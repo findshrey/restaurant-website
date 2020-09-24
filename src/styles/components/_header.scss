@@ -1,0 +1,58 @@
+// HERO SECTION
+.hero {
+   height: 100vh;
+   background: url('./../images/landing.jpg') no-repeat center center/cover;
+}
+
+.navbar {
+   position: fixed;
+   width: 100%;
+   padding: calc(2rem + 1vw);   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 10;
+
+   .hamburger {
+      display: none;
+   }
+}
+
+nav ul {
+   display: flex;
+
+   a {
+      color: white;
+      margin-left: 2rem;
+      font-weight: 500;
+
+      &:hover {
+         color: $red;
+      }
+   }
+}
+
+.hero-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;
+   align-items: center;
+   text-align: center;
+   color: $white;
+   padding: 0 2rem;
+
+   h1 {
+      margin-bottom: 2rem;
+   }
+
+   p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: $big-text;
+      font-weight: 300;
+   }
+
+   a {
+      margin-top: 3rem;
+   }
+}

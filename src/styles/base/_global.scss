@@ -1,1 +1,54 @@
-// GLOBAL STYLES (Default Styles)
+// GLOBAL STYLES
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+
+body {
+   background: $white;
+   color: $text-primary;
+   font-family: 'Montserrat', sans-serif;
+   line-height: 1.6;
+}
+
+h1 {
+   font-size: $header1;
+   @include header(('Montserrat', sans-serif), 400, 2px);
+}
+h2 {
+   // NOT BEING USED ANYWHERE
+   font-size: $header2;
+   @include header(('Montserrat', sans-serif), 700, 3px);
+}
+h3 {
+   font-size: $header3;
+   @include header(('Montserrat', sans-serif), 500, 2px);
+}
+h4 {
+   font-size: $header4;
+   @include header(('Montserrat', sans-serif), 300, 1px);
+}
+
+p, span, li, a, label, input {
+   font-size: $text;
+}
+
+button {
+   font-family: inherit;
+   font-size: $text;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: $text-primary;
+}
