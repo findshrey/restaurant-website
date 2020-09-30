@@ -32,3 +32,12 @@
       // font-weight: 300;
    }
 }
+
+@media (max-width: 800px) {
+   // FEATURES SECTION
+   #features {
+      .container {
+         grid-template-columns: 1fr;
+      }
+   }
+}

@@ -45,3 +45,27 @@
       }
    }
 }
+
+@media (max-width: 800px) {
+   // ABOUT
+   .about-content {
+      .about-block {
+         grid-template-columns: 1fr;
+         gap: 5rem;
+   
+         img {
+            // width: 100%;
+         }
+   
+         p {
+            // display: flex;
+            // align-items: center;
+            text-align: center;
+         }
+   
+         &:first-child {
+            margin-bottom: 1rem;
+         }
+      }
+   }
+}

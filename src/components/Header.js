@@ -1,7 +1,21 @@
 import React from 'react'
 
 class Header extends React.Component {
+   state = {
+      bubbleMenuOpen: false
+   }
+
+   bubbleMenuHandler = () => {
+      this.setState((prevState) => ({ bubbleMenuOpen: !prevState.bubbleMenuOpen }))
+   }
+
+   closeBubbleMenu = () => {
+      this.setState({ bubbleMenuOpen: false })
+   }
+
    render() {
+      const menu = ['home', 'about', 'menu', 'gallery', 'reservation']
+
       return (
          <header className="hero">
             <div className="navbar">
@@ -9,14 +23,21 @@ class Header extends React.Component {
                   <img src="./icons/logo2.svg" alt="" />
                </div>
                <nav>
-                  <ul className="nav-links">
-                     <li><a href="#">HOME</a></li>
-                     <li><a href="#about">ABOUT</a></li>
-                     <li><a href="#menu">MENU</a></li>
-                     <li><a href="#gallery">GALLERY</a></li>
-                     <li><a href="#reservation">RESERVATION</a></li>
+                  <ul className={this.state.bubbleMenuOpen ? "nav-links active" : "nav-links"}>
+                     {
+                        menu.map((el) => (
+                           <li>
+                              <a href={`#${el}`} onClick={this.closeBubbleMenu}>
+                                 {el}
+                              </a>
+                           </li>
+                        ))
+                     }
                   </ul>
                </nav>
+               <div className="hamburger" onClick={this.bubbleMenuHandler}>
+                  <i className="fas fa-bars fa-2x"></i>
+               </div>
             </div>
             <div className="hero-content">
                <h4>Welcome To</h4>
