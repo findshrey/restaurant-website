@@ -1,0 +1,34 @@
+// FOOTER 
+.footer-upper {
+   background: #141414;
+   color: darken($white, 20%);
+   padding: calc(5rem + 1vw) 0;
+
+   .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+      // justify-items: center;
+   }
+
+   .upper-block {
+      h4 {
+         font-size: $big-text;
+         margin-bottom: 2rem;
+         font-weight: 400;
+      }
+
+      p {
+         font-size: $small-text;
+         line-height: 1.8;
+      }
+   }
+}
+
+.footer-lower {
+   background: #000;
+   color: darken($white, 20%);
+   text-align: center;
+   padding: 3rem;
+}

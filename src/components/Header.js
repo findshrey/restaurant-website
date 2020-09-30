@@ -6,15 +6,15 @@ class Header extends React.Component {
          <header className="hero">
             <div className="navbar">
                <div className="logo">
-                  <img src="" alt="" />
+                  <img src="./icons/logo2.svg" alt="" />
                </div>
                <nav>
                   <ul className="nav-links">
                      <li><a href="#">HOME</a></li>
-                     <li><a href="#">ABOUT</a></li>
-                     <li><a href="#">MENU</a></li>
-                     <li><a href="#">GALLERY</a></li>
-                     <li><a href="#">RESERVATIONS</a></li>
+                     <li><a href="#about">ABOUT</a></li>
+                     <li><a href="#menu">MENU</a></li>
+                     <li><a href="#gallery">GALLERY</a></li>
+                     <li><a href="#reservation">RESERVATION</a></li>
                   </ul>
                </nav>
             </div>

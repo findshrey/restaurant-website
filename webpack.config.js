@@ -37,7 +37,7 @@ module.exports = (env, options) => {
       plugins: [
          new MiniCssExtractPlugin({
             // starting pt. is 'scripts' folder
-            filename: '/../styles/style.css'
+            filename: 'style.css'
          })
       ],
       devServer: {
