@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Showcase from './Showcase'
 import About from './About'
 import Features from './Features'
 import Menu from './Menu'
@@ -11,11 +12,14 @@ const App = () => {
    return (
       <>
          <Header />
-         <About />
-         <Features />
-         <Menu />
-         <Gallery />
-         <Reservation />
+         <main>
+            <Showcase />
+            <About />
+            <Features />
+            <Menu />
+            <Gallery />
+            <Reservation />
+         </main>
          <Footer />
       </>
    )
