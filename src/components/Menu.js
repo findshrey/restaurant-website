@@ -1,8 +1,15 @@
 import React from 'react'
+import MenuRouter from './MenuRouter'
 
 const Menu = () => (
    <section id="menu">
-      <p style={{ color: 'black', textAlign: 'center' }}>MENU</p>
+      <div className="container">
+         <header className="menu-head">
+            <h4>Choose & Taste</h4>
+            <h3>Restaurant Menu</h3>
+         </header>
+         <MenuRouter />
+      </div>
    </section>
 )
 

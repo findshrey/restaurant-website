@@ -1,0 +1,82 @@
+#menu {
+   padding: calc(5rem + 3vw) 0;
+   background: url('./../images/bg-red.webp') no-repeat center center/cover;
+}
+
+// HEADER
+.menu-head {
+   color: $white;
+   text-transform: uppercase;
+   text-align: center;
+   margin-bottom: calc(5rem + 1.5vw);
+
+   h4 {
+      font-size: $text;
+      font-weight: 400;
+      margin-bottom: 1rem;
+   }
+
+   h3:after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 55px;
+      background: $white;
+      margin: 0 auto;
+      margin-top: 25px;
+   }
+}
+
+// MENU NAV
+.menu-nav {
+   padding: 2rem 0;
+
+   a {
+      color: $white;
+      padding: 1.2rem 2rem;
+      margin-right: 0.5rem;
+      border-radius: 2px;
+      background: #cf1c22;
+      text-transform: uppercase;
+      font-size: $small-text;
+      cursor: pointer;
+   }
+
+   .is-active {
+      background: $white;
+      color: $red;
+   }
+}
+
+// MENU CATEGORY
+.menu-category {
+   background: $white;
+   padding: 5rem;
+   border-radius: 2px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5rem;
+   // min-height: 50rem;
+
+   .item {
+      // padding: 2rem;
+
+      &-title {
+         display: flex;
+         justify-content: space-between;
+         font-weight: 700;
+         text-transform: uppercase;
+         font-size: $small-text;
+      }
+
+      &-price {
+         color: $red;
+      }
+
+      &-description {
+         font-size: $small-text;
+         font-style: italic;
+         padding-right: 10rem;
+      }
+   }
+}
