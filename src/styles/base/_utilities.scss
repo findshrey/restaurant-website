@@ -39,6 +39,57 @@
    }
 }
 
+// Section Headers
+%head-common {
+   text-transform: uppercase;
+   text-align: center;
+   margin-bottom: calc(5rem + 1.5vw);
+
+   h4 {
+      font-size: $text;
+      font-weight: 400;
+      margin-bottom: 1rem;
+   }
+
+   h3:after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 55px;
+      margin: 0 auto;
+      margin-top: 25px;
+   }
+}
+
+.head {
+   &-dark {
+      @extend %head-common;
+
+      h3:after {
+         background: $contrast-primary;
+      }
+   }
+
+   &-light {
+      @extend %head-common;
+      color: $text-secondary;
+
+      h3:after {
+         background: $text-secondary;
+      }
+   }
+
+   &-res {
+      @extend %head-common;
+      color: darken($text-secondary, 10%);
+
+      h3:after {
+         background: darken($text-secondary, 10%);
+      }
+   }
+}
+
+
 // MIXINS
 
 // @mixin flex($justify, $align, $direction) {

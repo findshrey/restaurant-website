@@ -4,29 +4,6 @@
    background: url('./../images/bg-black-2.webp') no-repeat center center/cover;
 }
 
-.reservation-head {
-   text-transform: uppercase;
-   text-align: center;
-   margin-bottom: calc(5rem + 1.5vw);
-   color: darken($white, 10%);
-
-   h4 {
-      font-size: $text;
-      font-weight: 400;
-      margin-bottom: 1rem;
-   }
-
-   h3:after {
-      content: "";
-      display: block;
-      height: 4px;
-      width: 55px;
-      background: darken($white, 10%);
-      margin: 0 auto;
-      margin-top: 25px;
-   }
-}
-
 form {
    text-align: center;
 }

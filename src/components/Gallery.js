@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery = () => (
    <section id="gallery">
-      <header className="gallery-head">
+      <header className="head-dark">
          <h4>Delightful Experience</h4>
          <h3>Gallery</h3>
       </header>

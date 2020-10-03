@@ -1,10 +1,10 @@
 import React from 'react'
 
-const MenuCategory = (props) => {
+const MenuItems = (props) => {
    return (
-      <ul className="menu-category">
+      <ul className="menu-items">
          {
-            props.menuList.map((item) => (
+            props.itemList.map((item) => (
                <li className="item">
                   <div className="item-title">
                      <span className="item-name">{item.name}</span>
@@ -20,4 +20,4 @@ const MenuCategory = (props) => {
    )
 }
 
-export default MenuCategory
+export default MenuItems

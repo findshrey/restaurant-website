@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => (
    <section id="about">
       <div className="container">
-         <header className="about-head">
+         <header className="head-dark">
             <h4>Who we are</h4>
             <h3>Exotica History</h3>
          </header>

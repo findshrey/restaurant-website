@@ -1,6 +1,7 @@
+// SHOWCASE SECTION
 .showcase {
    height: 100vh;
-   background: url('./../images/landing.jpg') no-repeat center center/cover;
+   background: url('./../images/showcase.jpg') no-repeat center center/cover;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -9,17 +10,9 @@
    color: $text-secondary;
    padding: 0 2rem;
 
-   h1 {
-      margin-bottom: 2rem;
-   }
-
    p {
-      font-family: 'Montserrat', sans-serif;
       font-size: $big-text;
       font-weight: 300;
-   }
-
-   a {
-      margin-top: 3rem;
+      margin: 2rem 0 3rem 0;
    }
 }

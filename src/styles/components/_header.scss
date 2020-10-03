@@ -1,4 +1,4 @@
-// Header Section
+// HEADER SECTION
 .navbar {
    position: fixed;
    width: 100%;
@@ -32,34 +32,34 @@
    .navbar {
       .hamburger {
          display: block;
-         color: $white;
+         color: $text-secondary;
          cursor: pointer;
       }
 
       .nav-links {
-         position: fixed;
-         top: 0;
-         left: 0;
          background: $text-primary;
          flex-direction: column;
          justify-content: space-around;
          align-items: center;
-         padding: 15vh 0;
+         position: fixed;
+         top: 0;
+         left: 0;
          height: 100vh;
          width: 100vw;
-         z-index: -10;
-         pointer-events: none;
-         opacity: 0;
-         clip-path: circle(100px at 90% -10%);
-         -webkit-clip-path: circle(100px at 90% -10%);
+         padding: 15vh 0;
+         z-index: -100;
+         // pointer-events: none;
+         // opacity: 0;
+         clip-path: circle(10px at 110% -10%);
+         -webkit-clip-path: circle(10px at 110% -10%);
          transition: all 0.5s ease-out;
       }
 
       .nav-links.active {
-         pointer-events: auto;
-         opacity: 1;
-         clip-path: circle(1000px at 90% -10%);
-         -webkit-clip-path: circle(1000px at 90% -10%);
+         // pointer-events: auto;
+         // opacity: 1;
+         clip-path: circle(1500px at 110% -10%);
+         -webkit-clip-path: circle(1500px at 110% -10%);
       }
    }
 }

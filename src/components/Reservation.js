@@ -3,7 +3,7 @@ import React from 'react'
 const Reservation = () => (
    <section id="reservation">
       <div className="container">
-         <header className="reservation-head">
+         <header className="head-res">
             <h4>Book your table</h4>
             <h3>Reservation</h3>
          </header>

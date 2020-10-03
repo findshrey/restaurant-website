@@ -11,13 +11,13 @@
 }
 
 .feature {
-   color: $white;
+   color: $text-secondary;
    text-align: center;
    line-height: 1.8;
 
    i {
       font-size: 5rem;
-      color: $special-color;
+      color: $contrast-secondary;
    }
 
    h4 {
@@ -34,7 +34,6 @@
 }
 
 @media (max-width: 800px) {
-   // FEATURES SECTION
    #features {
       .container {
          grid-template-columns: 1fr;

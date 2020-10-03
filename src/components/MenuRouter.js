@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MenuNav from './MenuNav'
-import MenuCategory from './MenuCategory'
+import MenuItems from './MenuItems'
 import menu from './../data/menu'
 
 const MenuRouter = () => (
@@ -10,19 +10,19 @@ const MenuRouter = () => (
          <MenuNav />
          <Switch>
             <Route path="/" exact>
-               <MenuCategory menuList={menu.appetizers} />
+               <MenuItems itemList={menu.appetizers} />
             </Route>
             <Route path="/pasta">
-               <MenuCategory menuList={menu.pasta} />
+               <MenuItems itemList={menu.pasta} />
             </Route>
             <Route path="/entrees">
-               <MenuCategory menuList={menu.entrees} />
+               <MenuItems itemList={menu.entrees} />
             </Route>
             <Route path="/pizza">
-               <MenuCategory menuList={menu.pizza} />
+               <MenuItems itemList={menu.pizza} />
             </Route>
             <Route path="/beverages">
-               <MenuCategory menuList={menu.beverages} />
+               <MenuItems itemList={menu.beverages} />
             </Route>
          </Switch>
       </>
