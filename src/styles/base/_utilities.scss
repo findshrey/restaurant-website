@@ -1,4 +1,4 @@
-// UTILITY CLASSES
+// --- UTILITY CLASSES ---
 .container {
    width: 90%;
    max-width: 1440px;
@@ -16,24 +16,23 @@
 .btn {
    &-hero {
       @extend %btn-common;
-      background: $white;
-      border: 1px solid $white;
+      background: $text-secondary;
+      border: 1px solid $text-secondary;
 
       &:hover {
          background: transparent;
-         color: $white;
+         color: $text-secondary;
       }
    }
 
    &-reserve {
       @extend %btn-common;
-      background: rgba(0, 0, 0, .33);
-      border: 1px solid #505050;
-      color: darken($white, 20%);
+      background: rgba(darken($text-primary, 20%), 0.4);
+      border: 1px solid darken($text-secondary, 65%);
+      color: darken($text-secondary, 20%);
 
       &:hover {
-         background: $white;
-         border: 1px solid #505050;
+         background: $text-secondary;
          color: $text-primary;
       }
    }

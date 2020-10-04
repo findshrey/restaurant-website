@@ -8,7 +8,7 @@ const Reservation = () => (
             <h3>Reservation</h3>
          </header>
          <form>
-            <div className="form-inner">
+            <div className="form-wrapper">
                <div className="form-group">
                   <input type="text" placeholder="Date*" required />
                   <input type="text" placeholder="Time*" required />
@@ -19,7 +19,7 @@ const Reservation = () => (
                   <input type="number" placeholder="Phone*" required />
                   <input type="email" placeholder="Email" />
                </div>
-               <textarea name="" id="" rows="10" placeholder="Message"></textarea>
+               <textarea name="" id="" rows="10" placeholder="Message" />
             </div>
             <button type="submit" className="btn-reserve">Make Reservation</button>
          </form>

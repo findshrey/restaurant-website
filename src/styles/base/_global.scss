@@ -1,4 +1,4 @@
-// GLOBAL STYLES
+// --- GLOBAL STYLES ---
 * {
    margin: 0;
    padding: 0;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-   background: $white;
+   background: $text-secondary;
    color: $text-primary;
    font-family: 'Montserrat', sans-serif;
    line-height: 1.6;

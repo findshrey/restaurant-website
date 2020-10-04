@@ -8,7 +8,7 @@ form {
    text-align: center;
 }
 
-.form-inner {
+.form-wrapper {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    column-gap: 4rem;
@@ -20,11 +20,11 @@ form {
          width: 100%;
          margin-bottom: 2.5rem;
          padding: 1.5rem;
-         background: rgba(0, 0, 0, .33);
-         border: 1px solid #505050;
+         background: rgba(darken($text-primary, 20%), 0.4);
+         border: 1px solid darken($text-secondary, 65%);
          font-family: 'Montserrat', sans-serif;
          font-size: $small-text;
-         color: $white;
+         color: $text-secondary;
       }
 
       input:focus {
@@ -32,7 +32,7 @@ form {
       }
 
       input::placeholder {
-         color: darken($white, 30%);
+         color: darken($text-secondary, 30%);
       }
 
       /* Chrome, Safari, Edge, Opera */
@@ -51,11 +51,11 @@ form {
    textarea {
       grid-column: 1 / -1;
       padding: 1.5rem;
-      background: rgba(0, 0, 0, .33);
-      border: 1px solid #505050;
+      background: rgba(darken($text-primary, 20%), 0.4);
+      border: 1px solid darken($text-secondary, 65%);
       font-family: 'Montserrat', sans-serif;
       font-size: $small-text;
-      color: $white;
+      color: $text-secondary;
       resize: none;
       margin-bottom: 5rem;
    }
@@ -65,6 +65,6 @@ form {
    }
 
    textarea::placeholder {
-      color: darken($white, 30%);
+      color: darken($text-secondary, 30%);
    }
 }
