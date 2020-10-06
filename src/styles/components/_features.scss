@@ -1,35 +1,35 @@
-// FEATURES SECTION
+// Features Component
 #features {
    background: url('./../images/bg-black-1.jpg') no-repeat center center/cover;
-   padding: calc(5rem + 3vw) 0;
+   padding: $section-padding;
 
    .container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: calc(2rem + 1vw);
+      gap: calc(5rem + 1vw);
    }
 }
 
 .feature {
-   color: $text-secondary;
+   color: $text-light;
    text-align: center;
    line-height: 1.8;
 
    i {
-      font-size: 5rem;
-      color: $contrast-secondary;
+      font-size: 4.5rem;
+      color: $contrast-golden;
    }
 
    h4 {
       text-transform: uppercase;
-      font-size: $text;
-      font-weight: 700;
+      font-size: $m-text;
+      font-weight: 600;
       margin: calc(2rem + 0.75vw) 0;
    }
 
    p {
-      // font-size: $small-text;
-      // font-weight: 300;
+      font-family: $font-secondary;
+      font-weight: 300;
    }
 }
 
@@ -37,6 +37,7 @@
    #features {
       .container {
          grid-template-columns: 1fr;
+         gap: 6rem;
       }
    }
 }

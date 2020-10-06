@@ -1,24 +1,28 @@
-// HEADER SECTION
+// Header Component
 .navbar {
    position: fixed;
    width: 100%;
-   padding: calc(2rem + 1vw);   
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   padding: calc(2rem + 0.5vw) 0;   
    z-index: 100;
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
 
    .nav-links {
       display: flex;
 
       a {
-         color: $text-secondary;
-         margin-left: 2.5rem;
+         color: $text-light;
+         margin-left: calc(1.5rem + 0.5vw);
          font-weight: 500;
          text-transform: uppercase;
+         font-size: $s-text;
 
          &:hover {
-            color: $contrast-primary;
+            color: $contrast-red;
          }
       }
    }
@@ -32,12 +36,12 @@
    .navbar {
       .hamburger {
          display: block;
-         color: $text-secondary;
+         color: $text-light;
          cursor: pointer;
       }
 
       .nav-links {
-         background: $text-primary;
+         background: darken($text-dark, 15%);
          flex-direction: column;
          justify-content: space-around;
          align-items: center;
@@ -48,16 +52,17 @@
          width: 100vw;
          padding: 15vh 0;
          z-index: -100;
-         // pointer-events: none;
-         // opacity: 0;
          clip-path: circle(10px at 110% -10%);
          -webkit-clip-path: circle(10px at 110% -10%);
          transition: all 0.5s ease-out;
+
+         a {
+            margin: 0;
+            font-size: $m-text;
+         }
       }
 
       .nav-links.active {
-         // pointer-events: auto;
-         // opacity: 1;
          clip-path: circle(1500px at 110% -10%);
          -webkit-clip-path: circle(1500px at 110% -10%);
       }

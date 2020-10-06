@@ -9,7 +9,7 @@ const features = [
    {
       icon: 'fas fa-utensils',
       title: <>Delicious <br /> Food</>,
-      description: 'Pull up a chair. Take a taste. Come join us. Life is so endlessly delicious.'
+      description: 'Food paired with exquisite Italian wines and spirits for wholesome dining experience!'
    },
    {
       icon: 'fas fa-users',
@@ -19,7 +19,7 @@ const features = [
    {
       icon: 'fas fa-thumbs-up',
       title: <>Relaxing <br /> Atmosphere</>,
-      description: 'Because one cannot think well, love well, sleep well, if one has not dined well.'
+      description: 'Relaxing and soothing atmosphere for you to enjoy your meal to the fullest!'
    }
 ]
 

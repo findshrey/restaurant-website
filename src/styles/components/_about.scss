@@ -1,25 +1,22 @@
-// ABOUT SECTION
+// About Component
 #about {
-   padding: calc(5rem + 3vw) 0;
+   padding: $section-padding;
 }
 
 .about-content {
    .about-block {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 5rem;
-
-      img {
-         width: 100%;
-      }
+      gap: calc(3rem + 1vw);
 
       p {
          display: flex;
          align-items: center;
+         font-family: $font-secondary;
       }
 
       &:first-child {
-         margin-bottom: 10rem;
+         margin-bottom: calc(7rem + 1.5vw);
       }
    }
 }
@@ -30,13 +27,7 @@
          grid-template-columns: 1fr;
          gap: 5rem;
    
-         img {
-            // width: 100%;
-         }
-   
          p {
-            // display: flex;
-            // align-items: center;
             text-align: center;
          }
    

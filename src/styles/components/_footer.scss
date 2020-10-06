@@ -1,35 +1,57 @@
-// FOOTER 
+// Footer Component 
 .footer-upper {
-   background: darken($text-primary, 10%);
-   color: darken($text-secondary, 20%);
-   padding: calc(5rem + 1vw) 0;
+   background: darken($text-dark, 10%);
+   color: darken($text-light, 20%);
+   padding: $section-padding;
 
    .container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      justify-items: center;
-      gap: 2rem;
-      // text-align: center;
-      // justify-items: center;
+      gap: calc(2rem + 1vw);
    }
-
+   
    .content-block {
+      background: $text-dark;
+      text-align: center;
+      padding: 5rem 0;
+      position: relative;
+
+      i {
+         position: absolute;
+         top: 0%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         font-size: 2rem;
+         padding: 1.5rem;
+         background: $contrast-red;
+         border-radius: 50%;
+      }
+
       h4 {
-         font-size: $big-text;
+         font-size: $l-text;
          margin-bottom: 2rem;
-         font-weight: 400;
+         font-weight: 600;
       }
 
       p {
-         font-size: $small-text;
+         font-size: $s-text;
          line-height: 1.8;
       }
    }
 }
 
 .footer-lower {
-   background: darken($text-primary, 20%);
-   color: darken($text-secondary, 20%);
+   background: darken($text-dark, 20%);
+   color: darken($text-light, 20%);
    text-align: center;
-   padding: 3rem;
+   padding: 4rem;
+}
+
+@media (max-width: 800px) {
+   .footer-upper {   
+      .container {
+         grid-template-columns: 1fr;
+         gap: 5rem;
+      }
+   }
 }

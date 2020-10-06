@@ -1,17 +1,18 @@
-// SHOWCASE SECTION
+// Showcase Component
 .showcase {
    height: 100vh;
-   background: url('./../images/showcase.jpg') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+      url('./../images/pasta.jpg') no-repeat center center/cover;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    text-align: center;
-   color: $text-secondary;
+   color: $text-light;
    padding: 0 2rem;
 
    p {
-      font-size: $big-text;
+      font-size: $l-text;
       font-weight: 300;
       margin: 2rem 0 3rem 0;
    }

@@ -5,30 +5,27 @@ const About = () => (
       <div className="container">
          <header className="head-dark">
             <h4>Who we are</h4>
-            <h3>Exotica History</h3>
+            <h2>Exotica History</h2>
          </header>
          <div className="about-content">
             <div className="about-block">
                <p>
-                  Located on a then-lonesome little corner under the Williamsburg Bridge in Brooklyn, Exotica opened
-                  its doors on New Year’s Eve twenty years ago. Owners Andrew Tarlow and Mark Firth hosted and
-                  bartended and ended most nights with a hand of cards and pitcher of margaritas.
+                  Owners and the chef who hail from Emilia Romagna region of Northeastern Italy in settings that make you want to come back for more.
                   <br /> <br />
-                  Chef Caroline Fidanza wrote a daily menu committed to local, seasonal, sustainable foods, and built
-                  relationships with the farmers in upstate New York and surrounding regions.
+                  The experience at Exotica sparks memories of the Italian owners filled with nostalgia from their childhood as they prepare an entirely authentic and
+                  completely home-made Italian cuisine where we follow the tradition of serving an amazing selection of hand-made pasta from scratch every day –
+                  prepared in the same way as our mothers, and the mothers of their mothers, have always done it in our home region in Italy.
                </p>
                <img src="./images/aa/8.jpg" alt="" />
             </div>
             <div className="about-block">
                <img src="./images/aa/1.jpg" alt="" />
                <p>
-                  Exotic's expansive bar, a place to sit, read, eat and watch the world go by is the
-                  centerpiece
-                  of the room, a 90 year old Pullman dining car. Warm wood and aged enamel, like being in the belly
-                  of a whale or the protected hold of a ship.
+                  We pair our food with a long list of exquisite Italian wines and spirits to give you wholesome dining experience.
+                  We thrive on bringing people together with traditional Italian food and drinks.
                   <br /> <br />
-                  Twenty years later Exotica has carried on
-                  the traditions of its early days. A place of occasion. A touchstone for a neighborhood.
+                  The ambiance in our dining room is sophisticated but never too formal.
+                  Every corner of the restaurant has been lovingly decorated to showcase the original and traditional Italy straight out of our Italian owner’s memories.
                </p>
             </div>
          </div>

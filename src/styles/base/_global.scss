@@ -1,5 +1,5 @@
-// --- GLOBAL STYLES ---
-* {
+// Global Styles
+*, *::before, *::after {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -11,37 +11,27 @@ html {
 }
 
 body {
-   background: $text-secondary;
-   color: $text-primary;
-   font-family: 'Montserrat', sans-serif;
+   background: $text-light;
+   color: $text-dark;
+   font-family: $font-primary;
    line-height: 1.6;
 }
 
 h1 {
-   font-size: $header1;
-   @include header(('Montserrat', sans-serif), 400, 2px);
+   @include header($header1, 400, 2px);
 }
 h2 {
-   // NOT BEING USED ANYWHERE
-   font-size: $header2;
-   @include header(('Montserrat', sans-serif), 700, 3px);
+   @include header($header2, 600, 2px);
 }
 h3 {
-   font-size: $header3;
-   @include header(('Montserrat', sans-serif), 500, 2px);
+   @include header($header3, 300, 1px);
 }
 h4 {
-   font-size: $header4;
-   @include header(('Montserrat', sans-serif), 300, 1px);
+   @include header($header4, 400, 1px);
 }
 
-p, span, li, a, label, input {
-   font-size: $text;
-}
-
-button {
-   font-family: inherit;
-   font-size: $text;
+span, p, a, li, label, input, button {
+   font-size: $m-text;
 }
 
 ul {
@@ -50,5 +40,48 @@ ul {
 
 a {
    text-decoration: none;
-   color: $text-primary;
+   color: $text-dark;
+}
+
+button {
+   font-family: inherit;
+}
+
+img {
+   width: 100%;
+}
+
+@media (max-width: 500px) {
+   /* Header Sizes */
+   $header1: 2.5rem;
+   $header2: 2.5rem;
+   $header3: 2rem;
+   $header4: 1rem;
+   /* Text Sizes */
+   $text: 1.2rem;
+   $small-text: 1rem;
+
+   h1 {
+      font-size: 2.5rem;
+   }
+   h2 {
+      font-size: 2.5rem;
+   }
+   h3 {
+      font-size: 2rem;
+   }
+   h4 {
+      // font-size: 1rem;
+   }
+
+   span, p, a, li, label, input, button {
+      font-size: 1rem;
+   }
+
+   // h1, h3, h4 {
+   //    letter-spacing: 0.1rem;
+   // }
+   // h2 {
+   //    letter-spacing: 0.2rem;
+   // }
 }

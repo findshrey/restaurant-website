@@ -8,6 +8,7 @@ const Footer = () => (
             {
                footerContents.map((content) => (
                   <div className="content-block">
+                     <i className={content.icon}></i>
                      <h4>{content.title}</h4>
                      <p>{content.content}</p>
                   </div>

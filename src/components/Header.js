@@ -18,24 +18,26 @@ class Header extends React.Component {
 
       return (
          <header className="navbar">
-            <div className="logo">
-               <img src="./icons/logo2.svg" alt="" />
-            </div>
-            <nav>
-               <ul className={this.state.bubbleMenuOpen ? "nav-links active" : "nav-links"}>
-                  {
-                     navOptions.map((option) => (
-                        <li>
-                           <a href={`#${option}`} onClick={this.closeBubbleMenu}>
-                              {option}
-                           </a>
-                        </li>
-                     ))
-                  }
-               </ul>
-            </nav>
-            <div className="hamburger" onClick={this.bubbleMenuHandler}>
-               <i className="fas fa-bars fa-2x"></i>
+            <div className="container">
+               <div className="logo">
+                  <img src="./icons/logo.svg" alt="" />
+               </div>
+               <nav>
+                  <ul className={this.state.bubbleMenuOpen ? "nav-links active" : "nav-links"}>
+                     {
+                        navOptions.map((option) => (
+                           <li>
+                              <a href={`#${option}`} onClick={this.closeBubbleMenu}>
+                                 {option}
+                              </a>
+                           </li>
+                        ))
+                     }
+                  </ul>
+               </nav>
+               <div className="hamburger" onClick={this.bubbleMenuHandler}>
+                  <i className="fas fa-bars fa-2x"></i>
+               </div>
             </div>
          </header>
       )

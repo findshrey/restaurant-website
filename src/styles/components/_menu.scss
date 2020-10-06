@@ -1,57 +1,68 @@
+// Menu Component
 #menu {
-   padding: calc(5rem + 3vw) 0;
+   padding: $section-padding;
    background: url('./../images/bg-red.webp') no-repeat center center/cover;
 }
 
-// MENU NAV
+// MenuNav Component
 .menu-nav {
-   padding: 1.2rem 0;
-
    a {
-      color: $text-secondary;
+      display: inline-block;
+      background: darken($contrast-red, 10%);
+      color: $text-light;
       padding: 1.2rem 2rem;
-      margin-right: 0.5rem;
+      margin: 0 0.5rem 0.5rem 0;
       border-radius: 2px;
-      background: darken($contrast-primary, 10%);
       text-transform: uppercase;
-      font-size: $small-text;
+      font-size: $s-text;
+
+      &:last-child {
+         margin-right: 0;
+      }
    }
 
    .is-active {
-      background: $text-secondary;
-      color: $contrast-primary;
+      background: $text-light;
+      color: $contrast-red;
    }
 }
 
-// MENU CATEGORY
+// MenuItems Component
 .menu-items {
-   background: $text-secondary;
-   padding: 5rem;
-   border-radius: 2px;
+   background: $text-light;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 5rem;
-   // min-height: 50rem;
+   padding: 5rem calc(2rem + 2vw);
+   border-radius: 2px;
+   font-family: $font-secondary;
 
    .item {
-      // padding: 2rem;
-
       &-title {
          display: flex;
          justify-content: space-between;
-         font-weight: 700;
+         font-weight: 600;
          text-transform: uppercase;
-         font-size: $small-text;
       }
 
       &-price {
-         color: $contrast-primary;
+         color: $contrast-red;
       }
 
       &-description {
-         font-size: $small-text;
-         font-style: italic;
-         padding-right: 10rem;
+         font-size: $s-text;
+         padding-right: calc(5rem + 1.5vw);
       }
+   }
+}
+
+@media (max-width: 800px) {
+   .menu-nav {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .menu-items {
+      grid-template-columns: 1fr;
    }
 }

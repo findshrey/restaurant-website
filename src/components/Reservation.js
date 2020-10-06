@@ -3,9 +3,9 @@ import React from 'react'
 const Reservation = () => (
    <section id="reservation">
       <div className="container">
-         <header className="head-res">
+         <header className="head-reserve">
             <h4>Book your table</h4>
-            <h3>Reservation</h3>
+            <h2>Reservation</h2>
          </header>
          <form>
             <div className="form-wrapper">
@@ -19,7 +19,7 @@ const Reservation = () => (
                   <input type="number" placeholder="Phone*" required />
                   <input type="email" placeholder="Email" />
                </div>
-               <textarea name="" id="" rows="10" placeholder="Message" />
+               <textarea name="" id="" rows="13" placeholder="Message" />
             </div>
             <button type="submit" className="btn-reserve">Make Reservation</button>
          </form>

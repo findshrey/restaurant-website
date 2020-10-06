@@ -1,18 +1,23 @@
-// --- VARIABLES --- 
+// Fonts
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
 
 // Header(Tag) sizes
-$header1: calc(3rem + 2vw);
+$header1: calc(3rem + 1.5vw);
 $header2: calc(2rem + 1vw);
 $header3: calc(1.5rem + 1vw);
-$header4: calc(1rem + 1vw);
+$header4: calc(1rem + 0.75vw);
 
 // Text Sizes
-$big-text: calc(1.2rem + 0.75vw);
-$text: calc(1rem + 0.5vw);
-$small-text: calc(0.8rem + 0.5vw);
+$l-text: calc(1.2rem + 0.75vw);
+$m-text: calc(1rem + 0.5vw);
+$s-text: calc(0.8rem + 0.5vw);
 
 // Colors
-$text-primary: #333;
-$text-secondary: #fff;
-$contrast-primary: #e7272d;
-$contrast-secondary: #af9972;
+$text-dark: #333;
+$text-light: #fff;
+$contrast-red: #e7272d;
+$contrast-golden: #af9972;
+
+// Section padding
+$section-padding: calc(5rem + 3vw) 0;

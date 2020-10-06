@@ -1,7 +1,14 @@
-// --- UTILITY CLASSES ---
+// Utility Classes and Mixins
+
+// Containers
 .container {
    width: 90%;
    max-width: 1440px;
+   margin: 0 auto;
+}
+
+.container-hd {
+   max-width: 1920px;
    margin: 0 auto;
 }
 
@@ -9,31 +16,31 @@
 %btn-common {
    cursor: pointer;
    transition: all 0.4s ease;
-   padding: 1.2rem 2rem;
+   padding: 1.5rem 2rem;
    border-radius: 1px;
 }
 
 .btn {
-   &-hero {
+   &-light {
       @extend %btn-common;
-      background: $text-secondary;
-      border: 1px solid $text-secondary;
+      background: $text-light;
+      border: 1px solid $text-light;
 
       &:hover {
          background: transparent;
-         color: $text-secondary;
+         color: $text-light;
       }
    }
 
    &-reserve {
       @extend %btn-common;
-      background: rgba(darken($text-primary, 20%), 0.4);
-      border: 1px solid darken($text-secondary, 65%);
-      color: darken($text-secondary, 20%);
+      background: rgba(darken($text-dark, 20%), 0.4);
+      border: 1px solid darken($text-light, 65%);
+      color: darken($text-light, 20%);
 
       &:hover {
-         background: $text-secondary;
-         color: $text-primary;
+         background: $text-light;
+         color: $text-dark;
       }
    }
 }
@@ -45,15 +52,13 @@
    margin-bottom: calc(5rem + 1.5vw);
 
    h4 {
-      font-size: $text;
-      font-weight: 400;
-      margin-bottom: 1rem;
+      // margin-bottom: 0.5rem;
    }
 
-   h3:after {
+   h2:after {
       content: "";
       display: block;
-      height: 4px;
+      height: 3px;
       width: 55px;
       margin: 0 auto;
       margin-top: 25px;
@@ -64,32 +69,36 @@
    &-dark {
       @extend %head-common;
 
-      h3:after {
-         background: $contrast-primary;
+      h2:after {
+         background: $contrast-red;
       }
    }
 
    &-light {
       @extend %head-common;
-      color: $text-secondary;
+      color: $text-light;
 
-      h3:after {
-         background: $text-secondary;
+      h2:after {
+         background: $text-light;
       }
    }
 
-   &-res {
+   &-reserve {
       @extend %head-common;
-      color: darken($text-secondary, 10%);
+      color: darken($text-light, 10%);
 
-      h3:after {
-         background: darken($text-secondary, 10%);
+      h2:after {
+         background: darken($text-light, 10%);
       }
    }
 }
 
-
-// MIXINS
+// Hearder Properties
+@mixin header($f-size, $f-weight, $l-spacing) {
+   font-size: $f-size;
+   font-weight: $f-weight;
+   letter-spacing: $l-spacing;
+}
 
 // @mixin flex($justify, $align, $direction) {
 //    display: flex;
@@ -97,10 +106,3 @@
 //    align-items: $align;
 //    flex-direction: $direction;
 // }
-
-// Hearder Properties
-@mixin header($f-family, $f-weight, $l-spacing) {
-   font-family: $f-family;
-   font-weight: $f-weight;
-   letter-spacing: $l-spacing;
-}
