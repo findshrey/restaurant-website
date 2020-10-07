@@ -2,13 +2,29 @@ import React from 'react'
 
 class Header extends React.Component {
    state = {
-      bubbleMenuOpen: false
+      bubbleMenuOpen: false,
+      navClassName: 'navbar'
    }
 
+   componentDidMount() {
+      window.addEventListener('scroll', this.scrollHandler);
+   }
+
+   // Navbar background on Scroll
+   scrollHandler = () => {
+      if (window.pageYOffset > 75) {
+         this.setState({ navClassName: 'navbar scrolled' })
+      } else {
+         this.setState({ navClassName: 'navbar' })
+      }
+   }
+
+   // Toggle bubble menu
    bubbleMenuHandler = () => {
       this.setState((prevState) => ({ bubbleMenuOpen: !prevState.bubbleMenuOpen }))
    }
 
+   // Closes bubble menu
    closeBubbleMenu = () => {
       this.setState({ bubbleMenuOpen: false })
    }
@@ -17,7 +33,7 @@ class Header extends React.Component {
       const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
 
       return (
-         <header className="navbar">
+         <header className={this.state.navClassName}>
             <div className="container">
                <div className="logo">
                   <img src="./icons/logo.svg" alt="" />

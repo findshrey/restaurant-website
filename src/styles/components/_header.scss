@@ -4,6 +4,7 @@
    width: 100%;
    padding: calc(2rem + 0.5vw) 0;   
    z-index: 100;
+   transition: all 0.4s ease-in-out;
 
    .container {
       display: flex;
@@ -29,6 +30,11 @@
 
    .hamburger {
       display: none;
+   }
+
+   &.scrolled {
+      background: rgba(darken($text-dark, 10%), 0.9);
+      padding: calc(1.5rem + 0.25vw) 0;
    }
 }
 

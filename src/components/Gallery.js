@@ -8,15 +8,15 @@ const Gallery = () => (
             <h2>Gallery</h2>
          </header>
          <div className="gallery-wrapper">
-            <img src="./images/gallery-1.jpg" alt="" />
-            <img src="./images/gallery-2.jpg" alt="" />
-            <img src="./images/gallery-3.jpg" alt="" />
-            <img src="./images/gallery-4.jpg" alt="" />
-            <img src="./images/gallery-5.jpg" alt="" />
-            <img src="./images/gallery-6.jpg" alt="" />
-            <img src="./images/gallery-7.jpg" alt="" />
-            <img src="./images/gallery-8.jpg" alt="" />
-            <img src="./images/gallery-9.jpg" alt="" />
+            <img src="./images/final/gallery (1).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (2).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (3).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (4).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (5).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (6).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (7).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (8).jpg" alt="Food" loading="lazy" />
+            <img src="./images/final/gallery (9).jpg" alt="Food" loading="lazy" />
          </div>
       </div>
    </section>

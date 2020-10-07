@@ -30,7 +30,6 @@
       h4 {
          font-size: $l-text;
          margin-bottom: 2rem;
-         font-weight: 600;
       }
 
       p {
@@ -51,7 +50,7 @@
    .footer-upper {   
       .container {
          grid-template-columns: 1fr;
-         gap: 5rem;
+         gap: 6rem;
       }
    }
 }

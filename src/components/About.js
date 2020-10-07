@@ -4,8 +4,8 @@ const About = () => (
    <section id="about">
       <div className="container">
          <header className="head-dark">
-            <h4>Who we are</h4>
-            <h2>Exotica History</h2>
+            <h4>About Us</h4>
+            <h2>Who we are</h2>
          </header>
          <div className="about-content">
             <div className="about-block">
@@ -16,10 +16,10 @@ const About = () => (
                   completely home-made Italian cuisine where we follow the tradition of serving an amazing selection of hand-made pasta from scratch every day –
                   prepared in the same way as our mothers, and the mothers of their mothers, have always done it in our home region in Italy.
                </p>
-               <img src="./images/aa/8.jpg" alt="" />
+               <img src="./images/aa/8.jpg" alt="Restaurant image" loading="lazy" />
             </div>
             <div className="about-block">
-               <img src="./images/aa/1.jpg" alt="" />
+               <img src="./images/aa/1.jpg" alt="Women dining" loading="lazy" />
                <p>
                   We pair our food with a long list of exquisite Italian wines and spirits to give you wholesome dining experience.
                   We thrive on bringing people together with traditional Italian food and drinks.
