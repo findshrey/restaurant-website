@@ -1,4 +1,5 @@
 import React from 'react'
+import { Image } from 'cloudinary-react'
 
 const About = () => (
    <section id="about">
@@ -16,10 +17,28 @@ const About = () => (
                   completely home-made Italian cuisine where we follow the tradition of serving an amazing selection of hand-made pasta from scratch every day –
                   prepared in the same way as our mothers, and the mothers of their mothers, have always done it in our home region in Italy.
                </p>
-               <img src="./images/aa/8.jpg" alt="Restaurant image" loading="lazy" />
+               <Image
+                  cloudName="dg4arvkpw"
+                  publicId="exotica-restaurant/about/about_1_copv38.jpg"
+                  loading="lazy"
+                  srcSet="
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_500/exotica-restaurant/about/about_1_copv38.jpg 500w,
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_800/exotica-restaurant/about/about_1_copv38.jpg 800w,
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_1100/exotica-restaurant/about/about_1_copv38.jpg 1100w"
+                  sizes="(max-width: 800px) 90vw, 50vw"
+               />
             </div>
             <div className="about-block">
-               <img src="./images/aa/1.jpg" alt="Women dining" loading="lazy" />
+               <Image
+                  cloudName="dg4arvkpw"
+                  publicId="exotica-restaurant/about/about_2_f88ykl.jpg"
+                  loading="lazy"
+                  srcSet="
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_500/exotica-restaurant/about/about_2_f88ykl.jpg 500w,
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_800/exotica-restaurant/about/about_2_f88ykl.jpg 800w,
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_1100/exotica-restaurant/about/about_2_f88ykl.jpg 1100w"
+                  sizes="(max-width: 800px) 90vw, 50vw"
+               />
                <p>
                   We pair our food with a long list of exquisite Italian wines and spirits to give you wholesome dining experience.
                   We thrive on bringing people together with traditional Italian food and drinks.

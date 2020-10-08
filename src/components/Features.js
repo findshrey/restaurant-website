@@ -5,8 +5,8 @@ const Features = () => (
    <section id="features">
       <div className="container">
          {
-            features.map((feature) => (
-               <div className="feature">
+            features.map((feature, index) => (
+               <div className="feature" key={index} >
                   <i className={feature.icon}></i>
                   <h4>{feature.title}</h4>
                   <p>{feature.description}</p>

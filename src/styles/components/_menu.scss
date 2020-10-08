@@ -1,7 +1,7 @@
 // Menu Component
 #menu {
    padding: $section-padding;
-   background: url('./../images/bg-red.webp') no-repeat center center/cover;
+   background: url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105124/exotica-restaurant/background/bg-red_ewtws3.webp') no-repeat center center/cover;
 }
 
 // MenuNav Component
@@ -57,6 +57,10 @@
 }
 
 @media (max-width: 800px) {
+   #menu {
+      background: url('https://res.cloudinary.com/dg4arvkpw/image/upload/w_800,h_450/exotica-restaurant/background/bg-red_ewtws3.webp') no-repeat center center/cover;
+   }
+
    .menu-nav {
       display: flex;
       flex-wrap: wrap;

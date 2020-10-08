@@ -1,6 +1,6 @@
 // Features Component
 #features {
-   background: url('./../images/bg-black-1.jpg') no-repeat center center/cover;
+   background: url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105123/exotica-restaurant/background/bg-black-1_tnxhn1.jpg') no-repeat center center/cover;
    padding: $section-padding;
 
    .container {
@@ -34,6 +34,7 @@
 
 @media (max-width: 800px) {
    #features {
+   background: url('https://res.cloudinary.com/dg4arvkpw/image/upload/w_800,h_250/exotica-restaurant/background/bg-black-1_tnxhn1.jpg') no-repeat center center/cover;
       .container {
          grid-template-columns: 1fr;
          gap: 6rem;

@@ -4,8 +4,8 @@ const MenuItems = (props) => {
    return (
       <ul className="menu-items">
          {
-            props.itemList.map((item) => (
-               <li className="item">
+            props.itemList.map((item, index) => (
+               <li className="item" key={index} >
                   <div className="item-title">
                      <span className="item-name">{item.name}</span>
                      <span className="item-price">{item.price}</span>

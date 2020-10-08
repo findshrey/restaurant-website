@@ -36,14 +36,14 @@ class Header extends React.Component {
          <header className={this.state.navClassName}>
             <div className="container">
                <div className="logo">
-                  <img src="./icons/logo.svg" alt="" />
+                  <img src="./images/logo.svg" alt="Website-logo" />
                </div>
                <nav>
                   <ul className={this.state.bubbleMenuOpen ? "nav-links active" : "nav-links"}>
                      {
-                        navOptions.map((option) => (
-                           <li>
-                              <a href={`#${option}`} onClick={this.closeBubbleMenu}>
+                        navOptions.map((option, index) => (
+                           <li key={index}>
+                              <a href={`#${option}`} onClick={this.closeBubbleMenu} >
                                  {option}
                               </a>
                            </li>

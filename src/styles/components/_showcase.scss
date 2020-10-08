@@ -2,7 +2,7 @@
 .showcase {
    height: 100vh;
    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
-      url('./../images/showcase.jpg') no-repeat center center/cover;
+      url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105135/exotica-restaurant/showcase_zlwbqx.jpg') no-repeat center center/cover;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -15,5 +15,12 @@
       font-size: $l-text;
       font-weight: 300;
       margin: 2rem 0 3rem 0;
+   }
+}
+
+@media (max-width: 800px) {
+   .showcase {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
+      url('https://res.cloudinary.com/dg4arvkpw/image/upload/w_800/exotica-restaurant/showcase_zlwbqx.jpg') no-repeat center center/cover;
    }
 }

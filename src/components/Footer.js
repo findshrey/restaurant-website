@@ -6,8 +6,8 @@ const Footer = () => (
       <div className="footer-upper">
          <div className="container">
             {
-               footerContents.map((content) => (
-                  <div className="content-block">
+               footerContents.map((content, index) => (
+                  <div className="content-block" key={index} >
                      <i className={content.icon}></i>
                      <h4>{content.title}</h4>
                      <p>{content.content}</p>

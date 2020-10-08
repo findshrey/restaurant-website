@@ -1,7 +1,7 @@
 // Reservation Component
 #reservation {
    padding: $section-padding;
-   background: url('./../images/bg-black-2.webp') no-repeat center center/cover;
+   background: url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105123/exotica-restaurant/background/bg-black-2_dtqfgn.webp') no-repeat center center/cover;
 }
 
 form {
@@ -73,6 +73,10 @@ form {
 }
 
 @media (max-width: 800px) {
+   #reservation {
+   background: url('https://res.cloudinary.com/dg4arvkpw/image/upload/w_800,h_400/exotica-restaurant/background/bg-black-2_dtqfgn.webp') no-repeat center center/cover;
+
+   }
    .form-wrapper {
       grid-template-columns: 1fr;
    }
