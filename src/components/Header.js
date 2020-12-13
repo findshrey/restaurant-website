@@ -24,11 +24,6 @@ class Header extends React.Component {
       this.setState((prevState) => ({ bubbleMenuOpen: !prevState.bubbleMenuOpen }))
    }
 
-   // Closes bubble menu
-   closeBubbleMenu = () => {
-      this.setState({ bubbleMenuOpen: false })
-   }
-
    render() {
       const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
 
@@ -43,7 +38,7 @@ class Header extends React.Component {
                      {
                         navOptions.map((option, index) => (
                            <li key={index}>
-                              <a href={`#${option}`} onClick={this.closeBubbleMenu} >
+                              <a href={`#${option}`} onClick={this.bubbleMenuHandler} >
                                  {option}
                               </a>
                            </li>
