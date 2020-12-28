@@ -1,5 +1,5 @@
 // Fonts
-$font-primary: 'Montserrat', sans-serif;
+$font-primary: 'Lato', sans-serif;
 $font-secondary: 'Roboto', sans-serif;
 
 // Header(Tag) sizes
@@ -10,8 +10,8 @@ $header4: calc(1rem + 0.75vw);
 
 // Text Sizes
 $l-text: calc(1.2rem + 0.75vw);
-$m-text: calc(1rem + 0.5vw);
-$s-text: calc(0.8rem + 0.5vw);
+$m-text: clamp(1.5rem, calc(1rem + 0.6vw), 1.8rem);
+$s-text: clamp(1.2rem, calc(1rem + 0.6vw), 1.5rem);
 
 // Colors
 $text-dark: #333;

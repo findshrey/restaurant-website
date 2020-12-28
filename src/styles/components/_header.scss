@@ -1,76 +1,82 @@
 // Header Component
-.navbar {
+.main-head {
    position: fixed;
    width: 100%;
-   padding: calc(2rem + 0.5vw) 0;   
+   padding: 3rem 0;   
    z-index: 100;
    transition: all 0.4s ease-in-out;
 
    .container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-   }
-
-   .nav-links {
-      display: flex;
-
-      a {
-         color: $text-light;
-         margin-left: calc(1.5rem + 0.5vw);
-         font-weight: 500;
-         text-transform: uppercase;
-         font-size: $s-text;
-
-         &:hover {
-            color: $contrast-red;
-         }
-      }
-   }
-
-   .hamburger {
-      display: none;
+      justify-content: space-between;
    }
 
    &.scrolled {
       background: rgba(darken($text-dark, 10%), 0.9);
-      padding: calc(1.5rem + 0.25vw) 0;
+      padding: 1.5rem 0;
    }
 }
 
+.navigation ul {
+   display: flex;
+
+   li {
+      margin-left: 2rem;
+   }
+}
+
+.nav-link {
+   color: $text-light;
+   text-transform: uppercase;
+
+   &:hover {
+      color: $contrast-red;
+   }
+}
+
+.hamburger {
+   display: none;
+}
+
 @media (max-width: 800px) {
-   .navbar {
-      .hamburger {
-         display: block;
-         color: $text-light;
-         cursor: pointer;
+   .hamburger {
+      color: $text-light;
+      cursor: pointer;
+      display: block;
+      mix-blend-mode: difference;
+      z-index: 95;
+   }
+
+   .navigation {
+      background: $text-light;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 45%;
+      z-index: 90;
+      transform: translateX(100%);
+      transition: all 0.4s ease-in-out;
+
+      &.active {
+         transform: translateX(0);
       }
 
-      .nav-links {
-         background: darken($text-dark, 15%);
+      ul {
+         display: flex;
          flex-direction: column;
-         justify-content: space-around;
          align-items: center;
-         position: fixed;
-         top: 0;
-         left: 0;
-         height: 100vh;
-         width: 100vw;
-         padding: 15vh 0;
-         z-index: -100;
-         clip-path: circle(10px at 110% -10%);
-         -webkit-clip-path: circle(10px at 110% -10%);
-         transition: all 0.5s ease-out;
+         justify-content: center;
+         height: 100%;
 
-         a {
-            margin: 0;
-            font-size: $m-text;
+         li {
+            margin: 2rem 0;
          }
       }
+   }
 
-      .nav-links.active {
-         clip-path: circle(1500px at 110% -10%);
-         -webkit-clip-path: circle(1500px at 110% -10%);
-      }
+   .nav-link {
+      color: $text-dark;
    }
 }

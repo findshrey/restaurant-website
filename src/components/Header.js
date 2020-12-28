@@ -1,44 +1,44 @@
 import React from 'react'
+import Logo from './../data/Logo'
 
 class Header extends React.Component {
    state = {
       bubbleMenuOpen: false,
-      navClassName: 'navbar'
+      headerClass: 'main-head'
    }
 
    componentDidMount() {
-      window.addEventListener('scroll', this.scrollHandler);
+      window.addEventListener('scroll', this.handleHeaderOnScroll);
    }
 
-   // Navbar background on Scroll
-   scrollHandler = () => {
+   // Header background on scroll
+   handleHeaderOnScroll = () => {
       if (window.pageYOffset > 75) {
-         this.setState({ navClassName: 'navbar scrolled' })
+         this.setState({ headerClass: 'main-head scrolled' })
       } else {
-         this.setState({ navClassName: 'navbar' })
+         this.setState({ headerClass: 'main-head' })
       }
    }
 
    // Toggle bubble menu
-   bubbleMenuHandler = () => {
+   handleBubbleMenu = () => {
       this.setState((prevState) => ({ bubbleMenuOpen: !prevState.bubbleMenuOpen }))
    }
 
    render() {
+      const navClass = this.state.bubbleMenuOpen ? "navigation active" : "navigation"
       const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
 
       return (
-         <header className={this.state.navClassName}>
+         <header className={this.state.headerClass}>
             <div className="container">
-               <div className="logo">
-                  <img src="./images/logo.svg" alt="Website-logo" />
-               </div>
-               <nav>
-                  <ul className={this.state.bubbleMenuOpen ? "nav-links active" : "nav-links"}>
+               <Logo />
+               <nav className={navClass}>
+                  <ul>
                      {
                         navOptions.map((option, index) => (
                            <li key={index}>
-                              <a href={`#${option}`} onClick={this.bubbleMenuHandler} >
+                              <a href={`#${option}`} className="nav-link" onClick={this.handleBubbleMenu} >
                                  {option}
                               </a>
                            </li>
@@ -46,7 +46,7 @@ class Header extends React.Component {
                      }
                   </ul>
                </nav>
-               <div className="hamburger" onClick={this.bubbleMenuHandler}>
+               <div className="hamburger" onClick={this.handleBubbleMenu}>
                   <i className="fas fa-bars fa-2x"></i>
                </div>
             </div>
