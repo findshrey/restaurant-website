@@ -3,23 +3,24 @@ import React from 'react'
 const Logo = () => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="129"
-      height="23"
+      width="178"
+      height="24"
       fill="none"
-      viewBox="0 0 129 23"
+      viewBox="0 0 178 24"
    >
-      <g fontFamily="Lato" fontSize="30" letterSpacing=".02em">
-         <text fill="#E7272D" style={{ whiteSpace: "pre" }} fontWeight="600">
-            <tspan x="-2" y="21.61">
-               EXO
-          </tspan>
-         </text>
-         <text fill="#fff" style={{ whiteSpace: "pre" }} fontWeight="500">
-            <tspan x="60.181" y="21.61">
-               TICA
-          </tspan>
-         </text>
-      </g>
+      <text
+         fill="#E7272D"
+         xmlSpace="preserve"
+         style={{ whiteSpace: "pre" }}
+         fontFamily="Lato"
+         fontSize="30"
+         fontWeight="800"
+         letterSpacing=".02em"
+      >
+         <tspan x="-2" y="22.61">
+            LA CASETTA
+        </tspan>
+      </text>
    </svg>
 )
 

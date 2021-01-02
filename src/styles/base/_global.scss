@@ -23,16 +23,16 @@ body {
 }
 
 h1 {
-   @include header($header1, 400, 2px);
+   font-size: $header1;  // 400
 }
 h2 {
-   @include header($header2, 600, 2px);
+   font-size: $header2;  // 600
 }
 h3 {
-   @include header($header3, 300, 1px);
+   font-size: $header3;  // 300
 }
 h4 {
-   @include header($header4, 600, 1px);
+   font-size: $header4;  // 600
 }
 
 div, span, p, a, li, button, label, input {  // label, input
@@ -44,8 +44,7 @@ ul {
 }
 
 a {
-   // color: $text-dark;
-   color: inherit;
+   color: $text-dark;
    text-decoration: none;
 }
 

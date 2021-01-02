@@ -3,7 +3,7 @@
 // Containers
 .container {
    width: 90%;
-   max-width: 1440px;
+   max-width: 1280px;
    margin: 0 auto;
 }
 
@@ -94,8 +94,7 @@
 }
 
 // Hearder Properties
-@mixin header($f-size, $f-weight, $l-spacing) {
+@mixin header($f-size, $f-weight) {
    font-size: $f-size;
    font-weight: $f-weight;
-   letter-spacing: $l-spacing;
 }

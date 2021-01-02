@@ -1,22 +1,22 @@
 // Fonts
-$font-primary: 'Lato', sans-serif;
+$font-primary: 'Lato', sans-serif;  // 100,300,400,700
 $font-secondary: 'Roboto', sans-serif;
 
 // Header(Tag) sizes
-$header1: calc(3rem + 1.5vw);
+$header1: clamp(3.5rem, calc(2.5rem + 3vw), 7rem);
 $header2: calc(2rem + 1vw);
 $header3: calc(1.5rem + 1vw);
 $header4: calc(1rem + 0.75vw);
 
 // Text Sizes
-$l-text: calc(1.2rem + 0.75vw);
+$l-text: clamp(1.8rem, calc(1.5rem + 0.75vw), 2.2rem);
 $m-text: clamp(1.5rem, calc(1rem + 0.6vw), 1.8rem);
 $s-text: clamp(1.2rem, calc(1rem + 0.6vw), 1.5rem);
 
 // Colors
-$text-dark: #333;
+$text-dark: #252525;
 $text-light: #fff;
-$contrast-red: #e7272d;
+$contrast-red: #ea464b;  // e7272d  // ef4b4d
 $contrast-golden: #af9972;
 
 // Section padding
