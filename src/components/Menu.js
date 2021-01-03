@@ -4,7 +4,7 @@ import MenuRouter from './MenuRouter'
 const Menu = () => (
    <section id="menu">
       <div className="container">
-         <header className="head-light">
+         <header className="head-white">
             <h4>Choose & Taste</h4>
             <h2>Restaurant Menu</h2>
          </header>

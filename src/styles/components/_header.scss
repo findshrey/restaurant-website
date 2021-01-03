@@ -11,11 +11,6 @@
       align-items: center;
       justify-content: space-between;
    }
-
-   &.scrolled {
-      background: rgba(darken($text-dark, 10%), 0.9);
-      padding: 1.5rem 0;
-   }
 }
 
 .navigation ul {
@@ -29,10 +24,26 @@
 .nav-link {
    color: $text-light;
    font-size: $s-text;
+   font-weight: 700;
    text-transform: uppercase;
 
    &:hover {
       color: $contrast-red;
+   }
+}
+
+// Page Scrolled
+.main-head.scrolled {
+   background: $text-light;
+   padding: 1.5rem 0;
+   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+
+   .nav-link {
+      color: $contrast-red;
+
+      &:hover {
+         color: $text-dark;
+      }
    }
 }
 
@@ -44,9 +55,13 @@
    .hamburger {
       color: $text-light;
       cursor: pointer;
-      display: block;
+      display: flex;
       mix-blend-mode: difference;
       z-index: 95;
+
+      &-icon {
+         font-size: 2.2rem;
+      }
    }
 
    .navigation {
@@ -55,7 +70,7 @@
       top: 0;
       right: 0;
       height: 100%;
-      width: 45%;
+      width: 50%;
       z-index: 90;
       transform: translateX(100%);
       transition: all 0.4s ease-in-out;
@@ -78,6 +93,10 @@
    }
 
    .nav-link {
-      color: $text-dark;
+      color: $contrast-red;
+
+      &:hover {
+         color: $text-dark;
+      }
    }
 }

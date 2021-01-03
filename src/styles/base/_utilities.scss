@@ -14,10 +14,9 @@
 
 // Buttons
 %btn-common {
+   border-radius: 1px;
    cursor: pointer;
    transition: all 0.4s ease;
-   padding: 1.5rem 2rem;
-   border-radius: 1px;
 }
 
 .btn {
@@ -25,7 +24,8 @@
       @extend %btn-common;
       background: $text-light;
       border: 1px solid $text-light;
-
+      padding: 12px 20px;
+      
       &:hover {
          background: transparent;
          color: $text-light;
@@ -37,6 +37,7 @@
       background: rgba(darken($text-dark, 20%), 0.4);
       border: 1px solid darken($text-light, 65%);
       color: darken($text-light, 20%);
+      padding: 1.5rem 2.5rem;
 
       &:hover {
          background: $text-light;
@@ -50,6 +51,7 @@
    text-transform: uppercase;
    text-align: center;
    margin-bottom: calc(6rem + 1.5vw);
+   letter-spacing: 1px;
 
    h4 {
       font-weight: 400;
@@ -58,7 +60,7 @@
    h2:after {
       content: "";
       display: block;
-      height: 3px;
+      height: 4px;
       width: 55px;
       margin: 0 auto;
       margin-top: 25px;
@@ -66,29 +68,21 @@
 }
 
 .head {
-   &-dark {
+   &-red {
       @extend %head-common;
+      color: $contrast-red;
 
       h2:after {
          background: $contrast-red;
       }
    }
 
-   &-light {
+   &-white {
       @extend %head-common;
-      color: $text-light;
+      color: darken($text-light, 5%);
 
       h2:after {
-         background: $text-light;
-      }
-   }
-
-   &-reserve {
-      @extend %head-common;
-      color: darken($text-light, 10%);
-
-      h2:after {
-         background: darken($text-light, 10%);
+         background: darken($text-light, 5%);
       }
    }
 }

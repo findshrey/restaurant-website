@@ -4,7 +4,7 @@ import { Image } from 'cloudinary-react'
 const About = () => (
    <section id="about">
       <div className="container">
-         <header className="head-dark">
+         <header className="head-red">
             <h4>About Us</h4>
             <h2>Who we are</h2>
          </header>

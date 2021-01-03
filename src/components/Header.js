@@ -1,9 +1,10 @@
 import React from 'react'
+import * as FaIcons from 'react-icons/fa'
 import Logo from './../data/Logo'
 
 class Header extends React.Component {
    state = {
-      bubbleMenuOpen: false,
+      sideDrawer: false,
       headerClass: 'main-head'
    }
 
@@ -20,13 +21,13 @@ class Header extends React.Component {
       }
    }
 
-   // Toggle bubble menu
-   handleBubbleMenu = () => {
-      this.setState((prevState) => ({ bubbleMenuOpen: !prevState.bubbleMenuOpen }))
+   // Toggle sideDrawer menu
+   handleSideDrawer = () => {
+      this.setState((prevState) => ({ sideDrawer: !prevState.sideDrawer }))
    }
 
    render() {
-      const navClass = this.state.bubbleMenuOpen ? "navigation active" : "navigation"
+      const navClass = this.state.sideDrawer ? "navigation active" : "navigation"
       const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
 
       return (
@@ -38,7 +39,7 @@ class Header extends React.Component {
                      {
                         navOptions.map((option, index) => (
                            <li key={index}>
-                              <a href={`#${option}`} className="nav-link" onClick={this.handleBubbleMenu} >
+                              <a href={`#${option}`} className="nav-link" onClick={this.handleSideDrawer} >
                                  {option}
                               </a>
                            </li>
@@ -46,8 +47,8 @@ class Header extends React.Component {
                      }
                   </ul>
                </nav>
-               <div className="hamburger" onClick={this.handleBubbleMenu}>
-                  <i className="fas fa-bars fa-2x"></i>
+               <div className="hamburger" onClick={this.handleSideDrawer}>
+                  <FaIcons.FaBars className="hamburger-icon" />
                </div>
             </div>
          </header>

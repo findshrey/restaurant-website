@@ -4,7 +4,7 @@ import { Image, CloudinaryContext } from 'cloudinary-react'
 const Gallery = () => (
    <section id="gallery">
       <div className="container-hd">
-         <header className="head-dark">
+         <header className="head-red">
             <h4>Delightful Experience</h4>
             <h2>Gallery</h2>
          </header>

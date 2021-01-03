@@ -1,7 +1,7 @@
 // Showcase Component
 .showcase {
-   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-      url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105135/exotica-restaurant/showcase_zlwbqx.jpg') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('../images/zz.jpg') no-repeat center center/cover;
    background-attachment: fixed;
    color: $text-light;
    display: flex;
@@ -10,7 +10,8 @@
    justify-content: center;
    text-align: center;
    height: 100vh;
-   padding: 0 2rem;
+   padding: 0 20px;
+   letter-spacing: 1px;
 
    h3 {
       font-weight: 400;
@@ -18,14 +19,14 @@
    }
 
    h1 {
-      font-weight: 700;
-      text-transform: uppercase;
-      // letter-spacing: 1px;
+      letter-spacing: 3px;
+      // text-transform: uppercase;
    }
 
    p {
       font-size: $l-text;
-      margin: 2.5rem 0 3.5rem 0;
+      margin: 2rem 0 4rem 0;
+      max-width: 700px;
    }
 }
 
