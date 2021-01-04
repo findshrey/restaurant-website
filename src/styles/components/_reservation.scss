@@ -1,66 +1,24 @@
 // Reservation Component
-#reservation {
+.reservation {
+   background: $text-dark;
    padding: $section-padding;
-   background: url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105123/exotica-restaurant/background/bg-black-2_dtqfgn.webp') no-repeat center center/cover;
 }
 
-form {
-   text-align: center;
-}
-
-.form-wrapper {
+.form {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 4rem;
-
-   .form-group {
-      input {
-         display: block;
-         width: 100%;
-         margin-bottom: 3rem;
-         padding: 1.5rem;
-         background: rgba(darken($text-dark, 20%), 0.4);
-         border: 1px solid darken($text-light, 65%);
-         font-family: $font-primary;
-         font-size: $s-text;
-         color: $text-light;
-
-         &:last-child {
-            margin-bottom: 0;
-         }
-
-         &:focus {
-            outline: none;
-         }
-
-         &::placeholder {
-            color: darken($text-light, 30%);
-         }
-      }
-
-      /* Chrome, Safari, Edge, Opera */
-      input[type="number"]::-webkit-outer-spin-button,
-      input[type="number"]::-webkit-inner-spin-button {
-         -webkit-appearance: none;
-         margin: 0;
-      }
-
-      /* Firefox */
-      input[type="number"] {
-         -moz-appearance: textfield;
-      }
-   }
-
+   
    textarea {
-      grid-column: 1 / -1;
-      padding: 1.5rem;
       background: rgba(darken($text-dark, 20%), 0.4);
       border: 1px solid darken($text-light, 65%);
+      color: $text-light;
       font-family: $font-primary;
       font-size: $s-text;
-      color: $text-light;
+      grid-column: 1 / -1;
+      padding: 1.5rem;
+      margin-bottom: 5rem;
       resize: none;
-      margin-bottom: 6rem;
 
       &:focus {
          outline: none;
@@ -70,14 +28,53 @@ form {
          color: darken($text-light, 30%);
       }
    }
+
+   .btn-wrapper {
+      grid-column: 1 / -1;
+      text-align: center;
+   }
+}
+
+.form-group {
+   input {
+      background: rgba(darken($text-dark, 20%), 0.4);
+      border: 1px solid darken($text-light, 65%);
+      color: $text-light;
+      display: block;
+      font-family: $font-primary;
+      font-size: $s-text;
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      width: 100%;
+
+      &::placeholder {
+         color: darken($text-light, 30%);
+      }
+
+      &:focus {
+         outline: none;
+      }
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   /* Chrome, Safari, Edge, Opera */
+   input[type="number"]::-webkit-outer-spin-button,
+   input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+
+   /* Firefox */
+   input[type="number"] {
+      -moz-appearance: textfield;
+   }
 }
 
 @media (max-width: 800px) {
-   #reservation {
-   background: url('https://res.cloudinary.com/dg4arvkpw/image/upload/w_800,h_400/exotica-restaurant/background/bg-black-2_dtqfgn.webp') no-repeat center center/cover;
-
-   }
-   .form-wrapper {
+   .form {
       grid-template-columns: 1fr;
    }
 }
