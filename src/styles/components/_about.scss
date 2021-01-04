@@ -1,39 +1,34 @@
 // About Component
-#about {
+.about {
    padding: $section-padding;
 }
 
-.about-content {
-   .about-block {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: calc(3rem + 1vw);
+.about-block {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: calc(3rem + 1vw);
 
-      p {
-         display: flex;
-         align-items: center;
-         font-family: $font-secondary;
-      }
+   p {
+      display: flex;
+      align-items: center;
+   }
 
-      &:first-child {
-         margin-bottom: calc(7rem + 1.5vw);
-      }
+   &:first-child {
+      margin-bottom: calc(5rem + 3vw);
    }
 }
 
 @media (max-width: 800px) {
-   .about-content {
-      .about-block {
-         grid-template-columns: 1fr;
-         gap: 5rem;
-   
-         p {
-            text-align: center;
-         }
-   
-         &:first-child {
-            margin-bottom: 1rem;
-         }
+   .about-block {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+
+      p {
+         text-align: center;
+      }
+
+      &:first-child {
+         margin-bottom: 1rem;
       }
    }
 }

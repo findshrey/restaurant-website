@@ -2,7 +2,7 @@ import React from 'react'
 import { Image } from 'cloudinary-react'
 
 const About = () => (
-   <section id="about">
+   <section id="about" className="about">
       <div className="container">
          <header className="head-red">
             <h4>About Us</h4>
@@ -13,7 +13,7 @@ const About = () => (
                <p>
                   Owners and the chef who hail from Emilia Romagna region of Northeastern Italy in settings that make you want to come back for more.
                   <br /> <br />
-                  The experience at Exotica sparks memories of the Italian owners filled with nostalgia from their childhood as they prepare an entirely authentic and
+                  The experience sparks memories of the Italian owners filled with nostalgia from their childhood as they prepare an entirely authentic and
                   completely home-made Italian cuisine where we follow the tradition of serving an amazing selection of hand-made pasta from scratch every day –
                   prepared in the same way as our mothers, and the mothers of their mothers, have always done it in our home region in Italy.
                </p>

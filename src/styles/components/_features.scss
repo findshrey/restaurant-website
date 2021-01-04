@@ -1,40 +1,42 @@
 // Features Component
-#features {
-   background: url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105123/exotica-restaurant/background/bg-black-1_tnxhn1.jpg') no-repeat center center/cover;
+.features {
+   background: $text-dark;
    padding: $section-padding;
 
    .container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: calc(5rem + 1vw);
+      gap: calc(1rem + 1vw);
    }
 }
 
 .feature {
+   border: 1px solid lighten($text-dark, 15%);
+   border-radius: 2px;
    color: $text-light;
    text-align: center;
-   line-height: 1.8;
+   padding: 3.5rem 2rem;
 
-   i {
-      font-size: 4.5rem;
+   &-icon {
+      font-size: clamp(3.5rem, calc(3rem + 1vw) , 4.5rem);
       color: $contrast-golden;
    }
 
    h4 {
-      text-transform: uppercase;
       font-size: $m-text;
-      margin: calc(2rem + 0.75vw) 0;
+      font-weight: 400;
+      margin: calc(2.5rem + 0.5vw) 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
    }
 
    p {
-      font-family: $font-secondary;
       font-weight: 300;
    }
 }
 
 @media (max-width: 800px) {
-   #features {
-   background: url('https://res.cloudinary.com/dg4arvkpw/image/upload/w_800,h_250/exotica-restaurant/background/bg-black-1_tnxhn1.jpg') no-repeat center center/cover;
+   .features {
       .container {
          grid-template-columns: 1fr;
          gap: 6rem;

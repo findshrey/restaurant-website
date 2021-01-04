@@ -1,6 +1,6 @@
 // Showcase Component
 .showcase {
-   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
       url('../images/zz.jpg') no-repeat center center/cover;
    background-attachment: fixed;
    color: $text-light;
@@ -9,13 +9,13 @@
    align-items: center;
    justify-content: center;
    text-align: center;
+   letter-spacing: 1px;
    height: 100vh;
    padding: 0 20px;
-   letter-spacing: 1px;
 
    h3 {
-      font-weight: 400;
       font-size: $l-text;
+      font-weight: 400;
    }
 
    h1 {
