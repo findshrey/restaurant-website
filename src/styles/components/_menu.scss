@@ -1,20 +1,20 @@
 // Menu Component
-#menu {
+.menu {
    padding: $section-padding;
-   background: url('http://res.cloudinary.com/dg4arvkpw/image/upload/v1602105124/exotica-restaurant/background/bg-red_ewtws3.webp') no-repeat center center/cover;
+   background: $contrast-red;
 }
 
 // MenuNav Component
 .menu-nav {
    a {
-      display: inline-block;
-      background: darken($contrast-red, 10%);
+      background: darken($contrast-red, 8%);
+      border-radius: 2px;
       color: $text-light;
+      display: inline-block;
+      font-size: $s-text;
+      text-transform: uppercase;
       padding: 1.2rem 2rem;
       margin: 0 0.5rem 0.5rem 0;
-      border-radius: 2px;
-      text-transform: uppercase;
-      font-size: $s-text;
 
       &:last-child {
          margin-right: 0;
@@ -30,37 +30,33 @@
 // MenuItems Component
 .menu-items {
    background: $text-light;
+   border-radius: 2px;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 5rem;
-   padding: 5rem calc(2rem + 2vw);
-   border-radius: 2px;
-   font-family: $font-secondary;
+   padding: 5rem clamp(2.5rem, calc(2rem + 2vw) , 5rem);
+}
 
-   .item {
-      &-title {
-         display: flex;
-         justify-content: space-between;
-         font-weight: 600;
-         text-transform: uppercase;
-      }
+.item {
+   &-title {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      text-transform: uppercase;
+   }
 
-      &-price {
-         color: $contrast-red;
-      }
+   &-price {
+      color: $contrast-red;
+   }
 
-      &-description {
-         font-size: $s-text;
-         padding-right: calc(5rem + 1.5vw);
-      }
+   &-description {
+      color: lighten($text-dark, 25%);
+      font-size: $s-text;
+      padding-right: calc(5rem + 1.5vw);
    }
 }
 
 @media (max-width: 800px) {
-   #menu {
-      background: url('https://res.cloudinary.com/dg4arvkpw/image/upload/w_800,h_450/exotica-restaurant/background/bg-red_ewtws3.webp') no-repeat center center/cover;
-   }
-
    .menu-nav {
       display: flex;
       flex-wrap: wrap;
@@ -68,5 +64,6 @@
 
    .menu-items {
       grid-template-columns: 1fr;
+      gap: 4rem;
    }
 }
