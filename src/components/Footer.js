@@ -7,8 +7,10 @@ const Footer = () => (
          <div className="container">
             {
                footerContents.map((content, index) => (
-                  <div className="content-block" key={index} >
-                     <i className={content.icon}></i>
+                  <div className="footer-block" key={index} >
+                     <div className="footer-icon">
+                        {content.icon}
+                     </div>
                      <h4>{content.title}</h4>
                      <p>{content.content}</p>
                   </div>
@@ -18,7 +20,7 @@ const Footer = () => (
       </div>
       <div className="footer-lower">
          <div className="container">
-            <p>Copyright &copy; Exotica 2020</p>
+            <p>Copyright &copy; La Casetta 2020</p>
          </div>
       </div>
    </footer>

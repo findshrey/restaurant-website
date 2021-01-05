@@ -1,7 +1,7 @@
 // Footer Component 
 .footer-upper {
    background: darken($text-dark, 10%);
-   color: darken($text-light, 20%);
+   color: darken($text-light, 10%);
    padding: $section-padding;
 
    .container {
@@ -9,41 +9,48 @@
       grid-template-columns: repeat(3, 1fr);
       gap: calc(2rem + 1vw);
    }
-   
-   .content-block {
-      background: $text-dark;
-      text-align: center;
-      padding: 5rem 0;
-      position: relative;
+}
 
-      i {
-         position: absolute;
-         top: 0%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         font-size: 2rem;
-         padding: 1.5rem;
-         background: $contrast-red;
-         border-radius: 50%;
-      }
+.footer-block {
+   background: $text-dark;
+   position: relative;
+   letter-spacing: 1px;
+   text-align: center;
+   padding: 5rem 0;
 
-      h4 {
-         font-size: $l-text;
-         margin-bottom: 2rem;
-      }
+   .footer-icon {
+      background: $contrast-red;
+      border-radius: 50%;
+      display: flex;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1.5rem;
 
-      p {
-         font-size: $s-text;
-         line-height: 1.8;
+      svg {
+         font-size: 25px;
       }
+   }
+
+   h4 {
+      font-size: $l-text;
+      margin-bottom: 2rem;
+   }
+
+   p {
+      font-size: $s-text;
+      line-height: 1.8;
    }
 }
 
 .footer-lower {
-   background: darken($text-dark, 20%);
-   color: darken($text-light, 20%);
+   background: darken($text-light, 10%);
+   color: $text-dark;
+   letter-spacing: 1px;
+   font-weight: 700;
    text-align: center;
-   padding: 4rem;
+   padding: 4rem 0;
 }
 
 @media (max-width: 800px) {

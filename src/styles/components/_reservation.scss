@@ -76,5 +76,9 @@
 @media (max-width: 800px) {
    .form {
       grid-template-columns: 1fr;
+
+      textarea {
+         margin-bottom: 3rem;
+      }
    }
 }
