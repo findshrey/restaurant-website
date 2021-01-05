@@ -1,14 +1,7 @@
-// Utility Classes and Mixins
-
-// Containers
+// Utility Classes
 .container {
    width: 90%;
    max-width: 1280px;
-   margin: 0 auto;
-}
-
-.container-hd {
-   max-width: 1920px;
    margin: 0 auto;
 }
 
@@ -22,69 +15,71 @@
 .btn {
    &-light {
       @extend %btn-common;
-      background: $text-light;
-      border: 1px solid $text-light;
+      background: $c-white;
+      border: 1px solid $c-white;
       padding: 12px 20px;
       
       &:hover {
          background: transparent;
-         color: $text-light;
+         color: $c-white;
       }
    }
 
    &-reserve {
       @extend %btn-common;
-      background: rgba(darken($text-dark, 20%), 0.4);
-      border: 1px solid darken($text-light, 65%);
-      color: darken($text-light, 20%);
-      padding: 1.5rem 2.5rem;
+      background: rgba(darken($c-black, 20%), 0.4);
+      border: 1px solid darken($c-white, 65%);
+      color: darken($c-white, 20%);
+      padding: 15px 25px;
 
       &:hover {
-         background: $text-light;
-         color: $text-dark;
+         background: $c-white;
+         color: $c-black;
       }
    }
 }
 
-// Section Headers
+// Section headers
 %head-common {
    text-transform: uppercase;
    text-align: center;
-   margin-bottom: calc(6rem + 1.5vw);
+   margin-bottom: clamp(6rem, calc(5rem + 3vw), 10rem);
    letter-spacing: 1px;
 
-   h2:after {
-      content: "";
-      display: block;
-      height: 4px;
-      width: 55px;
-      margin: 0 auto;
-      margin-top: 25px;
+   h2 {
+      font-weight: 400;
+
+      &::after {
+         content: "";
+         display: block;
+         height: 4px;
+         width: 55px;
+         margin: 0 auto;
+         margin-top: 25px;
+      }
+   }
+
+   h3 {
+      font-weight: 400;
    }
 }
 
 .head {
-   &-red {
-      @extend %head-common;
-      color: $contrast-red;
-
-      h2:after {
-         background: $contrast-red;
-      }
-   }
-
    &-white {
       @extend %head-common;
-      color: darken($text-light, 5%);
+      color: $c-white;
 
       h2:after {
-         background: darken($text-light, 5%);
+         background: $c-white;
       }
    }
-}
 
-// Hearder Properties
-@mixin header($f-size, $f-weight) {
-   font-size: $f-size;
-   font-weight: $f-weight;
+   &-red {
+      @extend %head-common;
+      color: $c-red;
+
+      h2:after {
+         background: $c-red;
+      }
+   }
 }

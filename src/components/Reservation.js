@@ -4,7 +4,7 @@ const Reservation = () => (
    <section id="reservation" className="reservation">
       <div className="container">
          <header className="head-white">
-            <h4>Book your table</h4>
+            <h3>Book your table</h3>
             <h2>Reservation</h2>
          </header>
          <form className="form">

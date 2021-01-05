@@ -22,27 +22,27 @@
 }
 
 .nav-link {
-   color: $text-light;
-   font-size: $s-text;
+   color: $c-white;
+   font-size: $font-s;
    font-weight: 700;
    text-transform: uppercase;
 
    &:hover {
-      color: $contrast-red;
+      color: $c-red;
    }
 }
 
 // Page Scrolled
 .main-head.scrolled {
-   background: $text-light;
+   background: $c-white;
    padding: 1.5rem 0;
    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 
    .nav-link {
-      color: $contrast-red;
+      color: $c-red;
 
       &:hover {
-         color: $text-dark;
+         color: $c-black;
       }
    }
 }
@@ -53,7 +53,7 @@
 
 @media (max-width: 800px) {
    .hamburger {
-      color: $text-light;
+      color: $c-white;
       cursor: pointer;
       display: flex;
       mix-blend-mode: difference;
@@ -65,7 +65,7 @@
    }
 
    .navigation {
-      background: $text-light;
+      background: $c-white;
       position: fixed;
       top: 0;
       right: 0;
@@ -93,10 +93,10 @@
    }
 
    .nav-link {
-      color: $contrast-red;
+      color: $c-red;
 
       &:hover {
-         color: $text-dark;
+         color: $c-black;
       }
    }
 }

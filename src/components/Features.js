@@ -10,7 +10,7 @@ const Features = () => (
                   <div className="feature-icon">
                      {feature.icon}
                   </div>
-                  <h4>{feature.title}</h4>
+                  <h3>{feature.title}</h3>
                   <p>{feature.description}</p>
                </div>
             ))

@@ -1,6 +1,6 @@
 // Reservation Component
 .reservation {
-   background: $text-dark;
+   background: $c-black;
    padding: $section-padding;
 }
 
@@ -10,11 +10,11 @@
    gap: 4rem;
    
    textarea {
-      background: rgba(darken($text-dark, 20%), 0.4);
-      border: 1px solid darken($text-light, 65%);
-      color: $text-light;
+      background: rgba(darken($c-black, 20%), 0.4);
+      border: 1px solid darken($c-white, 65%);
+      color: $c-white;
       font-family: $font-primary;
-      font-size: $s-text;
+      font-size: $font-s;
       grid-column: 1 / -1;
       padding: 1.5rem;
       margin-bottom: 5rem;
@@ -25,7 +25,7 @@
       }
 
       &::placeholder {
-         color: darken($text-light, 30%);
+         color: darken($c-white, 30%);
       }
    }
 
@@ -37,18 +37,18 @@
 
 .form-group {
    input {
-      background: rgba(darken($text-dark, 20%), 0.4);
-      border: 1px solid darken($text-light, 65%);
-      color: $text-light;
+      background: rgba(darken($c-black, 20%), 0.4);
+      border: 1px solid darken($c-white, 65%);
+      color: $c-white;
       display: block;
       font-family: $font-primary;
-      font-size: $s-text;
+      font-size: $font-s;
       margin-bottom: 3rem;
       padding: 1.5rem;
       width: 100%;
 
       &::placeholder {
-         color: darken($text-light, 30%);
+         color: darken($c-white, 30%);
       }
 
       &:focus {

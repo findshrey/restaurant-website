@@ -11,7 +11,7 @@ const Footer = () => (
                      <div className="footer-icon">
                         {content.icon}
                      </div>
-                     <h4>{content.title}</h4>
+                     <h3>{content.title}</h3>
                      <p>{content.content}</p>
                   </div>
                ))

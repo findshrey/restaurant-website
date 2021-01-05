@@ -1,7 +1,7 @@
 // Footer Component 
 .footer-upper {
-   background: darken($text-dark, 10%);
-   color: darken($text-light, 10%);
+   background: darken($c-black, 10%);
+   color: darken($c-white, 10%);
    padding: $section-padding;
 
    .container {
@@ -12,14 +12,14 @@
 }
 
 .footer-block {
-   background: $text-dark;
+   background: $c-black;
    position: relative;
    letter-spacing: 1px;
    text-align: center;
    padding: 5rem 0;
 
    .footer-icon {
-      background: $contrast-red;
+      background: $c-red;
       border-radius: 50%;
       display: flex;
       position: absolute;
@@ -29,24 +29,25 @@
       padding: 1.5rem;
 
       svg {
-         font-size: 25px;
+         font-size: 20px;
       }
    }
 
-   h4 {
-      font-size: $l-text;
+   h3 {
+      font-size: $font-l;
+      font-weight: 400;
       margin-bottom: 2rem;
    }
 
    p {
-      font-size: $s-text;
+      font-size: $font-s;
       line-height: 1.8;
    }
 }
 
 .footer-lower {
-   background: darken($text-light, 10%);
-   color: $text-dark;
+   background: darken($c-white, 15%);
+   color: $c-black;
    letter-spacing: 1px;
    font-weight: 700;
    text-align: center;

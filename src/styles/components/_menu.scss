@@ -1,17 +1,17 @@
 // Menu Component
 .menu {
    padding: $section-padding;
-   background: $contrast-red;
+   background: $c-red;
 }
 
 // MenuNav Component
 .menu-nav {
    a {
-      background: darken($contrast-red, 10%);
+      background: darken($c-red, 10%);
       border-radius: 2px;
-      color: $text-light;
+      color: $c-white;
       display: inline-block;
-      font-size: $s-text;
+      font-size: $font-s;
       text-transform: uppercase;
       padding: 1.2rem 2rem;
       margin: 0 0.5rem 0.5rem 0;
@@ -22,14 +22,14 @@
    }
 
    .is-active {
-      background: $text-light;
-      color: $contrast-red;
+      background: $c-white;
+      color: $c-red;
    }
 }
 
 // MenuItems Component
 .menu-items {
-   background: $text-light;
+   background: $c-white;
    border-radius: 2px;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
@@ -46,12 +46,12 @@
    }
 
    &-price {
-      color: $contrast-red;
+      color: $c-red;
    }
 
    &-description {
-      color: lighten($text-dark, 25%);
-      font-size: $s-text;
+      color: lighten($c-black, 25%);
+      font-size: $font-s;
       padding-right: calc(5rem + 1.5vw);
    }
 }

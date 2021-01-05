@@ -1,9 +1,9 @@
 // Gallery Component
-#gallery {
+.gallery {
    padding: $section-padding;
 }
 
-.gallery-wrapper {
+.gallery-inner {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 0.5rem;
@@ -14,7 +14,7 @@
 }
 
 @media (max-width:800px) {
-   .gallery-wrapper {
+   .gallery-inner {
       grid-template-columns: 1fr;
 
       img:first-child,

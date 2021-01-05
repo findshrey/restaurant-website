@@ -16,27 +16,24 @@ html {
 }
 
 body {
-   background: $text-light;
-   color: $text-dark;
+   background: $c-white;
+   color: $c-black;
    font-family: $font-primary;
    line-height: 1.6;
 }
 
 h1 {
-   font-size: $header1;  // 400
+   font-size: $h1;
 }
 h2 {
-   font-size: $header2;  // 600
+   font-size: $h2;
 }
 h3 {
-   font-size: $header3;  // 300
-}
-h4 {
-   font-size: $header4;  // 600
+   font-size: $h3;
 }
 
-div, span, p, a, li, button, label, input {  // label, input
-   font-size: $m-text;
+div, span, p, a, li, button, label, input {
+   font-size: $font-m;
 }
 
 ul {
@@ -44,7 +41,7 @@ ul {
 }
 
 a {
-   color: $text-dark;
+   color: $c-black;
    text-decoration: none;
 }
 
@@ -54,39 +51,4 @@ button {
 
 img {
    width: 100%;
-}
-
-@media (max-width: 500px) {
-   /* Header Sizes */
-   $header1: 2.5rem;
-   $header2: 2.5rem;
-   $header3: 2rem;
-   $header4: 1rem;
-   /* Text Sizes */
-   $text: 1.2rem;
-   $small-text: 1rem;
-
-   h1 {
-      // font-size: 2.5rem;
-   }
-   h2 {
-      // font-size: 2.5rem;
-   }
-   h3 {
-      // font-size: 2rem;
-   }
-   h4 {
-      // font-size: 1rem;
-   }
-
-   span, p, a, li, label, input, button {
-      // font-size: 1rem;
-   }
-
-   // h1, h3, h4 {
-   //    letter-spacing: 0.1rem;
-   // }
-   // h2 {
-   //    letter-spacing: 0.2rem;
-   // }
 }
