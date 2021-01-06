@@ -16,16 +16,23 @@
    h3 {
       font-size: $font-l;
       font-weight: 400;
+      @include animateText((0.6s));
    }
 
    h1 {
       letter-spacing: 3px;
+      @include animateText((0.7s));
    }
 
    p {
       font-size: $font-l;
       margin: 2rem 0 4rem 0;
       max-width: 700px;
+      @include animateText((0.8s));
+   }
+
+   a {
+      @include animateText((0.9s));
    }
 }
 

@@ -28,6 +28,8 @@ class Header extends React.Component {
 
    render() {
       const navClass = this.state.sideDrawer ? "navigation active" : "navigation"
+      const backdropClass = this.state.sideDrawer ? "backdrop" : ""
+
       const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
 
       return (
@@ -39,7 +41,7 @@ class Header extends React.Component {
                      {
                         navOptions.map((option, index) => (
                            <li key={index}>
-                              <a href={`#${option}`} className="nav-link" onClick={this.handleSideDrawer} >
+                              <a href={`#${option}`} className="nav-link" onClick={this.handleSideDrawer}>
                                  {option}
                               </a>
                            </li>
@@ -51,6 +53,7 @@ class Header extends React.Component {
                   <FaIcons.FaBars className="hamburger-icon" />
                </div>
             </div>
+            <div className={backdropClass} onClick={this.handleSideDrawer}></div>
          </header>
       )
    }

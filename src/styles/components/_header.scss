@@ -13,6 +13,10 @@
    }
 }
 
+.logo {
+   @include animateText((1.4s));
+}
+
 .navigation ul {
    display: flex;
 
@@ -26,6 +30,8 @@
    font-size: $font-s;
    font-weight: 700;
    text-transform: uppercase;
+   display: inline-block;
+   @include animateText((1.4s));
 
    &:hover {
       color: $c-red;
@@ -49,6 +55,16 @@
 
 .hamburger {
    display: none;
+}
+
+.backdrop {
+   background: rgba(#000, 0.4);
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 85;
 }
 
 @media (max-width: 800px) {
@@ -100,3 +116,5 @@
       }
    }
 }
+
+// Z-index priority : Header -> Hamburger -> Navigation -> Backdrop 
