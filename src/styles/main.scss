@@ -1,12 +1,15 @@
+// System
 @import './base/config';
 @import './base/utilities';
 @import './base/global';
 
+// Components
+@import './components/sections/showcase';
+@import './components/sections/about';
+@import './components/sections/features';
+@import './components/sections/menu';
+@import './components/sections/gallery';
+@import './components/sections/reservation';
+
 @import './components/header';
-@import './components/showcase';
-@import './components/about';
-@import './components/features';
-@import './components/menu';
-@import './components/gallery';
-@import './components/reservation';
 @import './components/footer';

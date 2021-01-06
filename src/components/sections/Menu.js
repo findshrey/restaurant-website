@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuRouter from './MenuRouter'
+import MenuRouter from './../MenuRouter'
 
 const Menu = () => (
    <section id="menu" className="menu">
