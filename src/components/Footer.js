@@ -2,7 +2,7 @@ import React from 'react'
 import footerContents from './../data/footer-contents'
 
 const Footer = () => (
-   <footer>
+   <footer className="section-fade-in">
       <div className="footer-upper">
          <div className="container">
             {

@@ -26,6 +26,11 @@ class Header extends React.Component {
       this.setState((prevState) => ({ sideDrawer: !prevState.sideDrawer }))
    }
 
+   // Remove backdrop and hide sideDrawer
+   handleBackdrop = () => {
+      this.setState(() => ({ sideDrawer: false }))
+   }
+
    render() {
       const navClass = this.state.sideDrawer ? "navigation active" : "navigation"
       const backdropClass = this.state.sideDrawer ? "backdrop" : ""
@@ -41,7 +46,7 @@ class Header extends React.Component {
                      {
                         navOptions.map((option, index) => (
                            <li key={index}>
-                              <a href={`#${option}`} className="nav-link" onClick={this.handleSideDrawer}>
+                              <a href={`#${option}`} className="nav-link" onClick={this.handleBackdrop}>
                                  {option}
                               </a>
                            </li>
@@ -53,7 +58,7 @@ class Header extends React.Component {
                   <FaIcons.FaBars className="hamburger-icon" />
                </div>
             </div>
-            <div className={backdropClass} onClick={this.handleSideDrawer}></div>
+            <div className={backdropClass} onClick={this.handleBackdrop}></div>
          </header>
       )
    }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, CloudinaryContext } from 'cloudinary-react'
 
 const Gallery = () => (
-   <section id="gallery" className="gallery">
+   <section id="gallery" className="gallery section-fade-in">
       <header className="head-red">
          <h3>Delightful Experience</h3>
          <h2>Gallery</h2>

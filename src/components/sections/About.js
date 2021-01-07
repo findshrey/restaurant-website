@@ -2,7 +2,7 @@ import React from 'react'
 import { Image } from 'cloudinary-react'
 
 const About = () => (
-   <section id="about" className="about">
+   <section id="about" className="about section-fade-in">
       <div className="container">
          <header className="head-red">
             <h3>About Us</h3>

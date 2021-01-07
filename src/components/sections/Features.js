@@ -2,7 +2,7 @@ import React from 'react'
 import features from '../../data/features'
 
 const Features = () => (
-   <section id="features" className="features">
+   <section id="features" className="features section-fade-in">
       <div className="container">
          {
             features.map((feature, index) => (

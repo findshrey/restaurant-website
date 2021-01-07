@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Reservation = () => (
-   <section id="reservation" className="reservation">
+   <section id="reservation" className="reservation section-fade-in">
       <div className="container">
          <header className="head-white">
             <h3>Book your table</h3>

@@ -84,8 +84,24 @@
    }
 }
 
-//  Fade-in animation
-@keyframes fadeIn {
+// Section fade-in animation
+.section-fade-in {
+   opacity: 0;
+}
+
+@keyframes sectionFadeIn {
+   from {
+      transform: translateY(200px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0px);
+   }
+}
+
+//  Text fade-in animation
+@keyframes textFadeIn {
    from {
       transform: translateY(20px);
    }
@@ -98,5 +114,5 @@
 
 @mixin animateText ($delay) {
    opacity: 0;
-   animation: fadeIn 0.5s ease-in-out forwards $delay;
+   animation: textFadeIn 0.5s ease-in-out forwards $delay;
 }
