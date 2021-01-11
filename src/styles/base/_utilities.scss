@@ -82,6 +82,15 @@
          background: $c-red;
       }
    }
+
+   &-black {
+      @extend %head-common;
+      color: $c-black;
+
+      h2:after {
+         background: $c-black;
+      }
+   }
 }
 
 // Section fade-in animation

@@ -3,7 +3,7 @@ import { Image, CloudinaryContext } from 'cloudinary-react'
 
 const Gallery = () => (
    <section id="gallery" className="gallery section-fade-in">
-      <header className="head-red">
+      <header className="head-black">
          <h3>Delightful Experience</h3>
          <h2>Gallery</h2>
       </header>
