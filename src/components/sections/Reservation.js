@@ -9,16 +9,16 @@ const Reservation = () => (
          </header>
          <form className="form" name="reservation" method="POST" netlify-honeypot="bot-field" data-netlify="true">
             <div className="form-group">
-               <input type="text" placeholder="Date*" required />
-               <input type="text" placeholder="Time*" required />
-               <input type="number" placeholder="Party" />
+               <input type="text" name="date" placeholder="Date*" required />
+               <input type="text" name="time" placeholder="Time*" required />
+               <input type="number" name="party" placeholder="Party" />
             </div>
             <div className="form-group">
-               <input type="text" placeholder="Name*" required />
-               <input type="number" placeholder="Phone*" required />
-               <input type="email" placeholder="Email" />
+               <input type="text" name="user-name" placeholder="Name*" required />
+               <input type="number" name="phone" placeholder="Phone*" required />
+               <input type="email" name="email" placeholder="Email" />
             </div>
-            <textarea rows="13" placeholder="Message" />
+            <textarea rows="13" name="message" placeholder="Message" />
             <div className="btn-wrapper">
                <button type="submit" className="btn-reserve">Make Reservation</button>
             </div>
