@@ -7,7 +7,7 @@ const Reservation = () => (
             <h3>Book your table</h3>
             <h2>Reservation</h2>
          </header>
-         <form className="form">
+         <form className="form" name="reservation" method="POST" netlify-honeypot="bot-field" data-netlify="true">
             <div className="form-group">
                <input type="text" placeholder="Date*" required />
                <input type="text" placeholder="Time*" required />
