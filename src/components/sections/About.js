@@ -19,24 +19,22 @@ const About = () => (
                </p>
                <Image
                   cloudName="dg4arvkpw"
-                  publicId="exotica-restaurant/about/about_1_copv38.jpg"
+                  publicId="la-casetta/about/about_1_rtkmdo.jpg"
                   loading="lazy"
                   srcSet="
-                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_500/exotica-restaurant/about/about_1_copv38.jpg 500w,
-                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_800/exotica-restaurant/about/about_1_copv38.jpg 800w,
-                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_1100/exotica-restaurant/about/about_1_copv38.jpg 1100w"
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_600/la-casetta/about/about_1_rtkmdo.jpg 600w,
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_1200/la-casetta/about/about_1_rtkmdo.jpg 1200w"
                   sizes="(max-width: 800px) 90vw, 50vw"
                />
             </div>
             <div className="about-block">
                <Image
                   cloudName="dg4arvkpw"
-                  publicId="exotica-restaurant/about/about_2_f88ykl.jpg"
+                  publicId="la-casetta/about/about_2_s8yey7.jpg"
                   loading="lazy"
                   srcSet="
-                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_500/exotica-restaurant/about/about_2_f88ykl.jpg 500w,
-                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_800/exotica-restaurant/about/about_2_f88ykl.jpg 800w,
-                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_1100/exotica-restaurant/about/about_2_f88ykl.jpg 1100w"
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_600/la-casetta/about/about_2_s8yey7.jpg 600w,
+                     https://res.cloudinary.com/dg4arvkpw/image/upload/w_1200/la-casetta/about/about_2_s8yey7.jpg 1200w"
                   sizes="(max-width: 800px) 90vw, 50vw"
                />
                <p>
