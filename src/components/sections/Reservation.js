@@ -13,10 +13,7 @@ const Reservation = () => (
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
-            onSubmit="submit"
          >
-            {/* Netlify forms prerequisite */}
-            <input type="hidden" name="form-name" value="reservation" />
             <div className="form-group">
                <input type="text" name="date" placeholder="Date*" required />
                <input type="text" name="time" placeholder="Time*" required />
