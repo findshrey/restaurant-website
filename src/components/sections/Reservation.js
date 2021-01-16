@@ -1,5 +1,11 @@
 import React from 'react'
 
+db.collection('appetizers').get().then((snapshot) => {
+   snapshot.docs.forEach(doc => {
+      console.log(doc.data());
+   })
+})
+
 const Reservation = () => (
    <section id="reservation" className="reservation section-fade-in">
       <div className="container">
