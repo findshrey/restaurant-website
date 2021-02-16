@@ -6,24 +6,29 @@
 
 // MenuNav Component
 .menu-nav {
-   a {
+   button {
       background: darken($c-red, 10%);
+      border: none;
       border-radius: 2px;
       color: $c-white;
-      display: inline-block;
+      // display: inline-block;
       font-size: $font-s;
       text-transform: uppercase;
       padding: 1.2rem 2rem;
       margin: 0 0.5rem 0.5rem 0;
 
+      &:focus {
+         outline: none;
+      }
+
       &:last-child {
          margin-right: 0;
       }
-   }
 
-   .is-active {
-      background: $c-white;
-      color: $c-red;
+      &.active {
+         background: $c-white;
+         color: $c-red;
+      }
    }
 }
 
