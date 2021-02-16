@@ -1,11 +1,11 @@
 import React from 'react'
-import features from '../../data/features'
+import { FEATURES } from './../../data/constants'
 
 const Features = () => (
    <section id="features" className="features section-fade-in">
       <div className="container">
          {
-            features.map((feature, index) => (
+            FEATURES.map((feature, index) => (
                <div className="feature" key={index} >
                   <div className="feature-icon">
                      {feature.icon}

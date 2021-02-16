@@ -1,6 +1,6 @@
 import React from 'react'
 import * as FaIcons from 'react-icons/fa'
-import Logo from './../data/Logo'
+import IconLaCasetta from './icons/IconLaCasetta'
 
 class Header extends React.Component {
    state = {
@@ -40,7 +40,7 @@ class Header extends React.Component {
       return (
          <header className={this.state.headerClass}>
             <div className="container">
-               <Logo />
+               <IconLaCasetta />
                <nav className={navClass}>
                   <ul>
                      {

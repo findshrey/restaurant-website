@@ -1,12 +1,12 @@
 import React from 'react'
-import footerContents from './../data/footer-contents'
+import { FOOTER_CONTENTS } from './../data/constants'
 
 const Footer = () => (
    <footer className="section-fade-in">
       <div className="footer-upper">
          <div className="container">
             {
-               footerContents.map((content, index) => (
+               FOOTER_CONTENTS.map((content, index) => (
                   <div className="footer-block" key={index} >
                      <div className="footer-icon">
                         {content.icon}
