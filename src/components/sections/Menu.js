@@ -1,8 +1,6 @@
 import React from 'react'
 
-import menu from './../../data/menu'
-
-const menuNav = Object.keys(menu)
+import firebase from './../../firebase'
 
 const filterDishes = (menu, filterBy) => {
    if (Object.keys(menu).length === 0) {
@@ -14,8 +12,21 @@ const filterDishes = (menu, filterBy) => {
 
 class Menu extends React.Component {
    state = {
+      menu: {},
       menuCategory: 'appetizers',
       activeBtn: 0
+   }
+
+   componentDidMount() {
+      let menuNex = {}
+
+      firebase.firestore().collection('menu').get().then((snapshot) => {
+         snapshot.docs.forEach((doc) => {
+            menuNex = { ...menuNex, ...doc.data() }
+         })
+
+         this.setState(() => ({ menu: menuNex }))
+      })
    }
 
    handleActiveBtn = (btnIndex) => {
@@ -27,7 +38,8 @@ class Menu extends React.Component {
    }
 
    render() {
-      const renderedItems = filterDishes(menu, this.state.menuCategory)
+      const menuNav = Object.keys(this.state.menu)
+      const renderedItems = filterDishes(this.state.menu, this.state.menuCategory)
 
       return (
          <section id="menu" className="menu section-fade-in">

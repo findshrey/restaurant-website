@@ -7,8 +7,6 @@
    <meta name="description"
       content="A taste of real Italy in Brooklyn from Chef Gerard Craft, featuring fresh pastas and wood-fired pizzas in a casual, family-friendly environment." />
    <meta name="robots" content="index, follow" />
-   <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
    <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -19,21 +17,6 @@
 <body>
    <!-- Injects react app -->
    <div id="root"></div>
-
-   <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-         apiKey: "AIzaSyCiUDkHBS-zyjMiYiYsYYUnUbCtJAgXvRE",
-         authDomain: "la-casetta-68948.firebaseapp.com",
-         projectId: "la-casetta-68948",
-         storageBucket: "la-casetta-68948.appspot.com",
-         messagingSenderId: "940684025874",
-         appId: "1:940684025874:web:a76a858184ab9128bb78cb"
-      }
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig)
-      const db = firebase.firestore()
-   </script>
 
    <!-- Bundle.js -->
    <script src="/scripts/bundle.js"></script>

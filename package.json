@@ -26,9 +26,9 @@
   },
   "dependencies": {
     "cloudinary-react": "^1.6.7",
+    "firebase": "^8.2.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-icons": "^4.1.0",
-    "react-router-dom": "^5.2.0"
+    "react-icons": "^4.1.0"
   }
 }
