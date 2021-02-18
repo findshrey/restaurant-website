@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Header from './Header'
 import Showcase from './sections/Showcase'
 import About from './sections/About'
@@ -9,6 +10,7 @@ import Reservation from './sections/Reservation'
 import Footer from './Footer'
 
 class App extends React.Component {
+   // Setup intersection observer
    componentDidMount() {
       const sections = document.querySelectorAll('.section-fade-in')
 

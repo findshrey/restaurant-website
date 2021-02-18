@@ -1,10 +1,9 @@
 // Menu Component
 .menu {
-   padding: $section-padding;
    background: $c-red;
+   padding: $padding-section;
 }
 
-// MenuNav Component
 .menu-nav {
    button {
       background: darken($c-red, 10%);
@@ -17,10 +16,6 @@
       padding: 1.2rem 2rem;
       margin: 0 0.5rem 0.5rem 0;
 
-      &:focus {
-         outline: none;
-      }
-
       &:last-child {
          margin-right: 0;
       }
@@ -32,7 +27,6 @@
    }
 }
 
-// MenuItems Component
 .menu-items {
    background: $c-white;
    border-radius: 2px;
@@ -55,7 +49,7 @@
    }
 
    &-description {
-      color: lighten($c-black, 25%);
+      color: lighten($c-black-matte, 25%);
       font-size: $font-s;
       padding-right: calc(5rem + 1.5vw);
    }

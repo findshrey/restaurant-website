@@ -1,8 +1,8 @@
 // Footer Component 
 .footer-upper {
-   background: darken($c-black, 10%);
+   background: darken($c-black-matte, 10%);
    color: darken($c-white, 10%);
-   padding: $section-padding;
+   padding: $padding-section;
 
    .container {
       display: grid;
@@ -12,7 +12,7 @@
 }
 
 .footer-block {
-   background: $c-black;
+   background: $c-black-matte;
    position: relative;
    letter-spacing: 1px;
    text-align: center;
@@ -47,7 +47,7 @@
 
 .footer-lower {
    background: $c-white;
-   color: $c-black;
+   color: $c-black-matte;
    letter-spacing: 1px;
    font-weight: 700;
    text-align: center;

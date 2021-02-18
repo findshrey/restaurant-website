@@ -2,7 +2,8 @@ import React from 'react'
 
 import firebase from './../../firebase'
 
-const filterDishes = (menu, filterBy) => {
+// Filter dishes by category
+const filterMenu = (menu, filterBy) => {
    if (Object.keys(menu).length === 0) {
       return []
    }
@@ -13,33 +14,38 @@ const filterDishes = (menu, filterBy) => {
 class Menu extends React.Component {
    state = {
       menu: {},
-      menuCategory: 'appetizers',
-      activeBtn: 0
+      activeBtn: 0,
+      selectedCategory: 'appetizers'
    }
 
+   // Get menu from firebase and set state
    componentDidMount() {
-      let menuNex = {}
+      let data = {}
 
       firebase.firestore().collection('menu').get().then((snapshot) => {
          snapshot.docs.forEach((doc) => {
-            menuNex = { ...menuNex, ...doc.data() }
+            data = { ...data, ...doc.data() }
          })
 
-         this.setState(() => ({ menu: menuNex }))
+         this.setState(() => ({ menu: data }))
       })
    }
 
+   // Set active button
    handleActiveBtn = (btnIndex) => {
       this.setState(() => ({ activeBtn: btnIndex }))
    }
 
-   handleChange = (navItem) => {
-      this.setState(() => ({ menuCategory: navItem }))
+   // Change selected category
+   handleCategory = (navItem) => {
+      this.setState(() => ({ selectedCategory: navItem }))
    }
 
    render() {
-      const menuNav = Object.keys(this.state.menu)
-      const renderedItems = filterDishes(this.state.menu, this.state.menuCategory)
+      // Get available menu categories
+      const menuCategories = Object.keys(this.state.menu)
+      // Get dishes to render
+      const renderedItems = filterMenu(this.state.menu, this.state.selectedCategory)
 
       return (
          <section id="menu" className="menu section-fade-in">
@@ -50,17 +56,15 @@ class Menu extends React.Component {
                </header>
                <nav className="menu-nav">
                   {
-                     menuNav.map((navItem, index) => {
-                        return (
-                           <button
-                              key={index}
-                              className={index === this.state.activeBtn ? 'active' : ''}
-                              onClick={() => { this.handleActiveBtn(index); this.handleChange(navItem) }}
-                           >
-                              {navItem}
-                           </button>
-                        )
-                     })
+                     menuCategories.map((category, index) => (
+                        <button
+                           key={index}
+                           className={index === this.state.activeBtn ? 'active' : ''}
+                           onClick={() => { this.handleActiveBtn(index); this.handleCategory(category) }}
+                        >
+                           {category}
+                        </button>
+                     ))
                   }
                </nav>
                <ul className="menu-items">

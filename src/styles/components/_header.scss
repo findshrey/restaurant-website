@@ -53,7 +53,7 @@
       color: $c-red;
 
       &:hover {
-         color: $c-black;
+         color: $c-black-matte;
       }
    }
 }
@@ -74,8 +74,9 @@
 
 @media (max-width: 800px) {
    .hamburger {
+      background-color: transparent;
+      border: none;
       color: $c-white;
-      cursor: pointer;
       display: flex;
       mix-blend-mode: difference;
       z-index: 95;
@@ -97,7 +98,7 @@
       transform: translateX(100%);
       transition: all 0.4s ease-in-out;
 
-      &.active {
+      &.side-drawer {
          transform: translateX(0);
       }
 
@@ -120,7 +121,7 @@
       opacity: 1;
 
       &:hover {
-         color: $c-black;
+         color: $c-black-matte;
       }
    }
 }

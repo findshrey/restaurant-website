@@ -1,5 +1,6 @@
 import React from 'react'
 import * as FaIcons from 'react-icons/fa'
+
 import IconLaCasetta from './icons/IconLaCasetta'
 
 class Header extends React.Component {
@@ -8,11 +9,12 @@ class Header extends React.Component {
       headerClass: 'main-head'
    }
 
+   // Listen for scroll
    componentDidMount() {
       window.addEventListener('scroll', this.handleHeaderOnScroll);
    }
 
-   // Header background on scroll
+   // Set background-color on scroll
    handleHeaderOnScroll = () => {
       if (window.pageYOffset > 75) {
          this.setState({ headerClass: 'main-head scrolled' })
@@ -32,7 +34,7 @@ class Header extends React.Component {
    }
 
    render() {
-      const navClass = this.state.sideDrawer ? "navigation active" : "navigation"
+      const navClass = this.state.sideDrawer ? "navigation side-drawer" : "navigation"
       const backdropClass = this.state.sideDrawer ? "backdrop" : ""
 
       const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
@@ -40,7 +42,9 @@ class Header extends React.Component {
       return (
          <header className={this.state.headerClass}>
             <div className="container">
-               <IconLaCasetta />
+               <div className="logo">
+                  <IconLaCasetta />
+               </div>
                <nav className={navClass}>
                   <ul>
                      {
@@ -54,9 +58,9 @@ class Header extends React.Component {
                      }
                   </ul>
                </nav>
-               <div className="hamburger" onClick={this.handleSideDrawer}>
+               <button className="hamburger" onClick={this.handleSideDrawer}>
                   <FaIcons.FaBars className="hamburger-icon" />
-               </div>
+               </button>
             </div>
             <div className={backdropClass} onClick={this.handleBackdrop}></div>
          </header>

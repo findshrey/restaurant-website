@@ -17,7 +17,7 @@ html {
 
 body {
    background: $c-white;
-   color: $c-black;
+   color: $c-black-matte;
    font-family: $font-primary;
    line-height: 1.6;
 }
@@ -41,12 +41,17 @@ ul {
 }
 
 a {
-   color: $c-black;
+   color: $c-black-matte;
    text-decoration: none;
 }
 
 button {
+   cursor: pointer;
    font-family: inherit;
+
+   &:focus {
+      outline: none;
+   }
 }
 
 img {

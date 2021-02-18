@@ -8,7 +8,6 @@
 // Buttons
 %btn-common {
    border-radius: 1px;
-   cursor: pointer;
    transition: all 0.4s ease;
 }
 
@@ -27,14 +26,14 @@
 
    &-reserve {
       @extend %btn-common;
-      background: rgba(darken($c-black, 20%), 0.4);
+      background: rgba(darken($c-black-matte, 20%), 0.4);
       border: 1px solid darken($c-white, 65%);
       color: darken($c-white, 20%);
       padding: 15px 25px;
 
       &:hover {
          background: $c-white;
-         color: $c-black;
+         color: $c-black-matte;
       }
    }
 }
@@ -85,10 +84,10 @@
 
    &-black {
       @extend %head-common;
-      color: $c-black;
+      color: $c-black-matte;
 
       h2:after {
-         background: $c-black;
+         background: $c-black-matte;
       }
    }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { FEATURES } from './../../data/constants'
 
 const Features = () => (

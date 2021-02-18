@@ -1,7 +1,7 @@
 // Reservation Component
 .reservation {
-   background: $c-black;
-   padding: $section-padding;
+   background: $c-black-matte;
+   padding: $padding-section;
 }
 
 .form {
@@ -10,10 +10,10 @@
    gap: 4rem;
    
    textarea {
-      background: rgba(darken($c-black, 20%), 0.4);
+      background: rgba(darken($c-black-matte, 20%), 0.4);
       border: 1px solid darken($c-white, 65%);
       color: $c-white;
-      font-family: $font-primary;
+      font-family: inherit;
       font-size: $font-s;
       grid-column: 1 / -1;
       padding: 1.5rem;
@@ -37,11 +37,11 @@
 
 .form-group {
    input {
-      background: rgba(darken($c-black, 20%), 0.4);
+      background: rgba(darken($c-black-matte, 20%), 0.4);
       border: 1px solid darken($c-white, 65%);
       color: $c-white;
       display: block;
-      font-family: $font-primary;
+      font-family: inherit;
       font-size: $font-s;
       margin-bottom: 3rem;
       padding: 1.5rem;
