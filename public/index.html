@@ -15,6 +15,22 @@
 </head>
 
 <body>
+
+   <!-- Netlify form -->
+   <form name="reservation" action="/" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <div className="form-group">
+         <input type="text" name="date">
+         <input type="text" name="time">
+         <input type="number" name="party">
+      </div>
+      <div className="form-group">
+         <input type="text" name="user-name">
+         <input type="number" name="phone">
+         <input type="email" name="email">
+      </div>
+      <textarea name="message"></textarea>
+   </form>
+
    <!-- Injects react app -->
    <div id="root"></div>
 
