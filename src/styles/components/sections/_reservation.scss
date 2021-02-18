@@ -4,7 +4,7 @@
    padding: $padding-section;
 }
 
-form {
+.form {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 4rem;
@@ -74,7 +74,7 @@ form {
 }
 
 @media (max-width: 800px) {
-   form {
+   .form {
       grid-template-columns: 1fr;
 
       textarea {

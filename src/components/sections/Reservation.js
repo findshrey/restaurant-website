@@ -9,6 +9,7 @@ const Reservation = () => (
          </header>
          <form
             name="reservation"
+            className="form"
             method="POST"
             action="/#reservation"
          >
