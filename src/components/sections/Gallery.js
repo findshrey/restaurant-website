@@ -12,7 +12,7 @@ class Gallery extends React.Component {
    componentDidMount() {
       let data = []
 
-      firebase.firestore().collection('gallery').get().then((snapshot) => {
+      firebase.firestore().collection('gallery').orderBy('id', 'asc').get().then((snapshot) => {
          snapshot.docs.forEach((doc) => {
             data = [...data, doc.data()]
          })
