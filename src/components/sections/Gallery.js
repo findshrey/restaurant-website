@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, CloudinaryContext } from 'cloudinary-react'
 
-import firebase from './../../firebase'
+import firebase from '../../firebase/firebase'
 
 class Gallery extends React.Component {
    state = {

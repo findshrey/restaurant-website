@@ -2,7 +2,7 @@
 
 An Italian restaurant website, hosted with [Netlify](https://www.netlify.com).
 
-![demo](src/readme_images/demo.png?raw=true)
+![demo](readme_images/demo-1.png?raw=true)
 
 ## Installation & Set Up
 
