@@ -1,6 +1,29 @@
 import React from 'react'
 import * as FaIcons from 'react-icons/fa'
 
+const NAV_LINKS = [
+   {
+      name: 'Home',
+      url: '#home'
+   },
+   {
+      name: 'About',
+      url: '#about'
+   },
+   {
+      name: 'Menu',
+      url: '#menu'
+   },
+   {
+      name: 'Gallery',
+      url: '#gallery'
+   },
+   {
+      name: 'Reservation',
+      url: '#reservation'
+   }
+]
+
 const FEATURES = [
    {
       icon: <FaIcons.FaAward />,
@@ -56,4 +79,4 @@ const FOOTER_CONTENTS = [
    }
 ]
 
-export { FEATURES, FOOTER_CONTENTS }
+export { NAV_LINKS, FEATURES, FOOTER_CONTENTS }

@@ -10,7 +10,7 @@ import Reservation from './sections/Reservation'
 import Footer from './Footer'
 
 const App = () => {
-   // Setup intersection observer
+   // Setup Intersection Observer
    useEffect(() => {
       const sections = document.querySelectorAll('.section-fade-in')
 

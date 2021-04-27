@@ -55,10 +55,8 @@
 }
 
 @media (max-width: 800px) {
-   .footer-upper {   
-      .container {
-         grid-template-columns: 1fr;
-         gap: 6rem;
-      }
+   .footer-upper .container {
+      grid-template-columns: 1fr;
+      gap: 6rem;
    }
 }

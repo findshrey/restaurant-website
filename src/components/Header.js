@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import * as FaIcons from 'react-icons/fa'
 
+import { NAV_LINKS } from './../data/constants'
 import IconLaCasetta from './icons/IconLaCasetta'
 
 const Header = () => {
-   const [sideDrawer, setSideDrawer] = useState(false)
    const [headerClass, setHeaderClass] = useState('main-head')
+   const [sideDrawer, setSideDrawer] = useState(false)
 
    // Listen for scroll
    useEffect(() => {
-      window.addEventListener('scroll', handleHeaderOnScroll);
+      window.addEventListener('scroll', handleHeader)
+
+      return () => {
+         window.removeEventListener('scroll', handleHeader)
+      }
    }, [])
 
    // Set background-color on scroll
-   const handleHeaderOnScroll = () => {
+   const handleHeader = () => {
       if (window.pageYOffset > 75) {
          setHeaderClass('main-head scrolled')
       } else {
@@ -31,24 +36,19 @@ const Header = () => {
       setSideDrawer(false)
    }
 
-   const navClass = sideDrawer ? "navigation side-drawer" : "navigation"
-   const backdropClass = sideDrawer ? "backdrop" : ""
-
-   const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
-
    return (
       <header className={headerClass}>
          <div className="container">
             <div className="logo">
                <IconLaCasetta />
             </div>
-            <nav className={navClass}>
+            <nav className={`navigation ${sideDrawer && 'side-drawer'}`}>
                <ul>
                   {
-                     navOptions.map((option, index) => (
+                     NAV_LINKS.map((link, index) => (
                         <li key={index}>
-                           <a href={`#${option}`} className="nav-link" onClick={handleBackdrop}>
-                              {option}
+                           <a href={link.url} className="nav-link" onClick={handleBackdrop}>
+                              {link.name}
                            </a>
                         </li>
                      ))
@@ -59,7 +59,8 @@ const Header = () => {
                <FaIcons.FaBars className="hamburger-icon" />
             </button>
          </div>
-         <div className={backdropClass} onClick={handleBackdrop}></div>
+         {/* BACKDROP */}
+         <div className={`${sideDrawer && 'backdrop'}`} onClick={handleBackdrop} />
       </header>
    )
 }
