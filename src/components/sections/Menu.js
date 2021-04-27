@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import firebase from './../../firebase/firebase'
 
@@ -11,15 +11,13 @@ const filterMenu = (menu, filterBy) => {
    return menu[filterBy]
 }
 
-class Menu extends React.Component {
-   state = {
-      menu: {},
-      activeBtn: 0,
-      selectedCategory: 'appetizers'
-   }
+const Menu = () => {
+   const [menu, setMenu] = useState({})
+   const [activeBtn, setActiveBtn] = useState(0)
+   const [selectedCategory, setSelectedCategory] = useState('appetizers')
 
    // Get menu from firebase and set state
-   componentDidMount() {
+   useEffect(() => {
       let data = {}
 
       firebase.firestore().collection('menu').get().then((snapshot) => {
@@ -27,65 +25,63 @@ class Menu extends React.Component {
             data = { ...data, ...doc.data() }
          })
 
-         this.setState(() => ({ menu: data }))
+         setMenu(data)
       })
-   }
+   }, [])
 
    // Set active button
-   handleActiveBtn = (btnIndex) => {
-      this.setState(() => ({ activeBtn: btnIndex }))
+   const handleActiveBtn = (btnIndex) => {
+      setActiveBtn(btnIndex)
    }
 
    // Change selected category
-   handleCategory = (navItem) => {
-      this.setState(() => ({ selectedCategory: navItem }))
+   const handleCategory = (navItem) => {
+      setSelectedCategory(navItem)
    }
 
-   render() {
-      // Get available menu categories
-      const menuCategories = Object.keys(this.state.menu)
-      // Get dishes to render
-      const renderedItems = filterMenu(this.state.menu, this.state.selectedCategory)
+   // Get available menu categories
+   const menuCategories = Object.keys(menu)
+   // Get dishes to render
+   const renderedItems = filterMenu(menu, selectedCategory)
 
-      return (
-         <section id="menu" className="menu section-fade-in">
-            <div className="container">
-               <header className="head-white">
-                  <h3>Choose & Taste</h3>
-                  <h2>Restaurant Menu</h2>
-               </header>
-               <nav className="menu-nav">
-                  {
-                     menuCategories.map((category, index) => (
-                        <button
-                           key={index}
-                           className={index === this.state.activeBtn ? 'active' : ''}
-                           onClick={() => { this.handleActiveBtn(index); this.handleCategory(category) }}
-                        >
-                           {category}
-                        </button>
-                     ))
-                  }
-               </nav>
-               <ul className="menu-items">
-                  {
-                     renderedItems.map((item, index) => (
-                        <li className="item" key={index} >
-                           <div className="item-title">
-                              <span className="item-name">{item.name}</span>
-                              <span className="item-price">{item.price}</span>
-                           </div>
-                           <div className="item-description">
-                              {item.description}
-                           </div>
-                        </li>
-                     ))
-                  }
-               </ul>
-            </div>
-         </section>
-      )
-   }
+   return (
+      <section id="menu" className="menu section-fade-in">
+         <div className="container">
+            <header className="head-white">
+               <h3>Choose & Taste</h3>
+               <h2>Restaurant Menu</h2>
+            </header>
+            <nav className="menu-nav">
+               {
+                  menuCategories.map((category, index) => (
+                     <button
+                        key={index}
+                        className={index === activeBtn ? 'active' : ''}
+                        onClick={() => { handleActiveBtn(index); handleCategory(category) }}
+                     >
+                        {category}
+                     </button>
+                  ))
+               }
+            </nav>
+            <ul className="menu-items">
+               {
+                  renderedItems.map((item, index) => (
+                     <li className="item" key={index} >
+                        <div className="item-title">
+                           <span className="item-name">{item.name}</span>
+                           <span className="item-price">{item.price}</span>
+                        </div>
+                        <div className="item-description">
+                           {item.description}
+                        </div>
+                     </li>
+                  ))
+               }
+            </ul>
+         </div>
+      </section>
+   )
 }
 
 export default Menu

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Header from './Header'
 import Showcase from './sections/Showcase'
@@ -9,9 +9,9 @@ import Gallery from './sections/Gallery'
 import Reservation from './sections/Reservation'
 import Footer from './Footer'
 
-class App extends React.Component {
+const App = () => {
    // Setup intersection observer
-   componentDidMount() {
+   useEffect(() => {
       const sections = document.querySelectorAll('.section-fade-in')
 
       const options = {
@@ -34,24 +34,22 @@ class App extends React.Component {
       sections.forEach((section) => {
          observer.observe(section)
       })
-   }
+   }, [])
 
-   render() {
-      return (
-         <>
-            <Header />
-            <main>
-               <Showcase />
-               <About />
-               <Features />
-               <Menu />
-               <Gallery />
-               <Reservation />
-            </main>
-            <Footer />
-         </>
-      )
-   }
+   return (
+      <>
+         <Header />
+         <main>
+            <Showcase />
+            <About />
+            <Features />
+            <Menu />
+            <Gallery />
+            <Reservation />
+         </main>
+         <Footer />
+      </>
+   )
 }
 
 export default App

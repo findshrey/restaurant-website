@@ -1,71 +1,67 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import * as FaIcons from 'react-icons/fa'
 
 import IconLaCasetta from './icons/IconLaCasetta'
 
-class Header extends React.Component {
-   state = {
-      sideDrawer: false,
-      headerClass: 'main-head'
-   }
+const Header = () => {
+   const [sideDrawer, setSideDrawer] = useState(false)
+   const [headerClass, setHeaderClass] = useState('main-head')
 
    // Listen for scroll
-   componentDidMount() {
-      window.addEventListener('scroll', this.handleHeaderOnScroll);
-   }
+   useEffect(() => {
+      window.addEventListener('scroll', handleHeaderOnScroll);
+   }, [])
 
    // Set background-color on scroll
-   handleHeaderOnScroll = () => {
+   const handleHeaderOnScroll = () => {
       if (window.pageYOffset > 75) {
-         this.setState({ headerClass: 'main-head scrolled' })
+         setHeaderClass('main-head scrolled')
       } else {
-         this.setState({ headerClass: 'main-head' })
+         setHeaderClass('main-head')
       }
    }
 
    // Toggle sideDrawer menu
-   handleSideDrawer = () => {
-      this.setState((prevState) => ({ sideDrawer: !prevState.sideDrawer }))
+   const handleSideDrawer = () => {
+      setSideDrawer((prevDrawerState) => !prevDrawerState)
    }
 
    // Remove backdrop and hide sideDrawer
-   handleBackdrop = () => {
-      this.setState(() => ({ sideDrawer: false }))
+   const handleBackdrop = () => {
+      setSideDrawer(false)
    }
 
-   render() {
-      const navClass = this.state.sideDrawer ? "navigation side-drawer" : "navigation"
-      const backdropClass = this.state.sideDrawer ? "backdrop" : ""
+   const navClass = sideDrawer ? "navigation side-drawer" : "navigation"
+   const backdropClass = sideDrawer ? "backdrop" : ""
 
-      const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
+   const navOptions = ['home', 'about', 'menu', 'gallery', 'reservation']
 
-      return (
-         <header className={this.state.headerClass}>
-            <div className="container">
-               <div className="logo">
-                  <IconLaCasetta />
-               </div>
-               <nav className={navClass}>
-                  <ul>
-                     {
-                        navOptions.map((option, index) => (
-                           <li key={index}>
-                              <a href={`#${option}`} className="nav-link" onClick={this.handleBackdrop}>
-                                 {option}
-                              </a>
-                           </li>
-                        ))
-                     }
-                  </ul>
-               </nav>
-               <button className="hamburger" onClick={this.handleSideDrawer}>
-                  <FaIcons.FaBars className="hamburger-icon" />
-               </button>
+   return (
+      <header className={headerClass}>
+         <div className="container">
+            <div className="logo">
+               <IconLaCasetta />
             </div>
-            <div className={backdropClass} onClick={this.handleBackdrop}></div>
-         </header>
-      )
-   }
+            <nav className={navClass}>
+               <ul>
+                  {
+                     navOptions.map((option, index) => (
+                        <li key={index}>
+                           <a href={`#${option}`} className="nav-link" onClick={handleBackdrop}>
+                              {option}
+                           </a>
+                        </li>
+                     ))
+                  }
+               </ul>
+            </nav>
+            <button className="hamburger" onClick={handleSideDrawer}>
+               <FaIcons.FaBars className="hamburger-icon" />
+            </button>
+         </div>
+         <div className={backdropClass} onClick={handleBackdrop}></div>
+      </header>
+   )
 }
 
 export default Header
