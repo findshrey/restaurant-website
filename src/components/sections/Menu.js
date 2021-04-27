@@ -42,7 +42,7 @@ const Menu = () => {
    // Get available menu categories
    const menuCategories = Object.keys(menu)
    // Get dishes to render
-   const renderedItems = filterMenu(menu, selectedCategory)
+   const filteredItems = filterMenu(menu, selectedCategory)
 
    return (
       <section id="menu" className="menu section-fade-in">
@@ -66,7 +66,7 @@ const Menu = () => {
             </nav>
             <ul className="menu-items">
                {
-                  renderedItems.map((item, index) => (
+                  filteredItems.map((item, index) => (
                      <li className="item" key={index} >
                         <div className="item-title">
                            <span className="item-name">{item.name}</span>

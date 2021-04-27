@@ -36,10 +36,8 @@
 }
 
 @media (max-width: 800px) {
-   .features {
-      .container {
-         grid-template-columns: 1fr;
-         gap: 6rem;
-      }
+   .features .container {
+      grid-template-columns: 1fr;
+      gap: 6rem;
    }
 }

@@ -8,6 +8,42 @@
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 4rem;
+
+   input {
+      background: rgba(darken($c-black-matte, 20%), 0.4);
+      border: 1px solid darken($c-white, 65%);
+      color: $c-white;
+      display: block;
+      font-family: inherit;
+      font-size: $font-s;
+      width: 100%;
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+
+      &:focus {
+         outline: none;
+      }
+
+      &::placeholder {
+         color: darken($c-white, 30%);
+      }
+   }
+
+   /* Chrome, Safari, Edge, Opera */
+   input[type="number"]::-webkit-outer-spin-button,
+   input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+
+   /* Firefox */
+   input[type="number"] {
+      -moz-appearance: textfield;
+   }
    
    textarea {
       background: rgba(darken($c-black-matte, 20%), 0.4);
@@ -32,44 +68,6 @@
    .btn-wrapper {
       grid-column: 1 / -1;
       text-align: center;
-   }
-}
-
-.form-group {
-   input {
-      background: rgba(darken($c-black-matte, 20%), 0.4);
-      border: 1px solid darken($c-white, 65%);
-      color: $c-white;
-      display: block;
-      font-family: inherit;
-      font-size: $font-s;
-      margin-bottom: 3rem;
-      padding: 1.5rem;
-      width: 100%;
-
-      &::placeholder {
-         color: darken($c-white, 30%);
-      }
-
-      &:focus {
-         outline: none;
-      }
-
-      &:last-child {
-         margin-bottom: 0;
-      }
-   }
-
-   /* Chrome, Safari, Edge, Opera */
-   input[type="number"]::-webkit-outer-spin-button,
-   input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-   }
-
-   /* Firefox */
-   input[type="number"] {
-      -moz-appearance: textfield;
    }
 }
 

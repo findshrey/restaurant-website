@@ -4,26 +4,24 @@
    padding: $padding-section;
 }
 
-.menu-nav {
-   button {
-      background: darken($c-red, 10%);
-      border: none;
-      border-radius: 2px;
-      color: $c-white;
-      // display: inline-block;
-      font-size: $font-s;
-      text-transform: uppercase;
-      padding: 1.2rem 2rem;
-      margin: 0 0.5rem 0.5rem 0;
+.menu-nav button {
+   background: darken($c-red, 10%);
+   border: none;
+   border-radius: 2px;
+   color: $c-white;
+   // display: inline-block;
+   font-size: $font-s;
+   text-transform: uppercase;
+   padding: 1.2rem 2rem;
+   margin: 0 0.5rem 0.5rem 0;
 
-      &:last-child {
-         margin-right: 0;
-      }
+   &:last-child {
+      margin-right: 0;
+   }
 
-      &.active {
-         background: $c-white;
-         color: $c-red;
-      }
+   &.active {
+      background: $c-white;
+      color: $c-red;
    }
 }
 
