@@ -9,11 +9,11 @@ const Footer = () => (
             {
                FOOTER_CONTENTS.map((content, index) => (
                   <div className="footer-block" key={index} >
-                     <div className="footer-icon">
+                     <div className="block-icon">
                         {content.icon}
                      </div>
                      <h3>{content.title}</h3>
-                     <p>{content.content}</p>
+                     <div className="block-content">{content.content}</div>
                   </div>
                ))
             }
@@ -21,7 +21,7 @@ const Footer = () => (
       </div>
       <div className="footer-lower">
          <div className="container">
-            <p>Copyright &copy; La Casetta 2020</p>
+            <span>Copyright &copy; La Casetta 2020</span>
          </div>
       </div>
    </footer>

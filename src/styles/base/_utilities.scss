@@ -16,7 +16,7 @@
       @extend %btn-common;
       background: $c-white;
       border: 1px solid $c-white;
-      padding: 12px 20px;
+      padding: 1.2rem 2rem;
       
       &:hover {
          background: transparent;
@@ -29,7 +29,7 @@
       background: rgba(darken($c-black-matte, 20%), 0.4);
       border: 1px solid darken($c-white, 65%);
       color: darken($c-white, 20%);
-      padding: 15px 25px;
+      padding: 1.5rem 2.5rem;
 
       &:hover {
          background: $c-white;
@@ -68,7 +68,7 @@
       @extend %head-common;
       color: $c-white;
 
-      h2:after {
+      h2::after {
          background: $c-white;
       }
    }
@@ -77,7 +77,7 @@
       @extend %head-common;
       color: $c-red;
 
-      h2:after {
+      h2::after {
          background: $c-red;
       }
    }
@@ -86,13 +86,13 @@
       @extend %head-common;
       color: $c-black-matte;
 
-      h2:after {
+      h2::after {
          background: $c-black-matte;
       }
    }
 }
 
-// Section fade-in animation
+// Animation: Section fade-in
 .section-fade-in {
    opacity: 0;
 }
@@ -108,7 +108,7 @@
    }
 }
 
-//  Text fade-in animation
+// Animation: Text fade-in
 @keyframes textFadeIn {
    from {
       transform: translateY(20px);

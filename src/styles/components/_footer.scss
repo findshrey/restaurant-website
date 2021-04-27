@@ -18,7 +18,7 @@
    text-align: center;
    padding: 5rem 0;
 
-   .footer-icon {
+   .block-icon {
       background: $c-red;
       border-radius: 50%;
       display: flex;
@@ -39,7 +39,7 @@
       margin-bottom: 2rem;
    }
 
-   p {
+   .block-content {
       font-size: $font-s;
       line-height: 1.8;
    }

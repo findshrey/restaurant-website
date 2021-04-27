@@ -11,7 +11,7 @@ const Reservation = () => (
             name="reservation"
             className="form"
             method="POST"
-            action="/#reservation"
+         // action="/#reservation"
          >
             {/* Connects to the HTML form within index.html */}
             <input type="hidden" name="form-name" value="reservation" />
