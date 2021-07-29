@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FOOTER_CONTENTS } from "./../data/constants"
+import { FOOTER_CONTENTS } from "../data/constants"
 
 const Footer = () => {
    return (

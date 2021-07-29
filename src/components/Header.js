@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import * as FaIcons from "react-icons/fa"
 
-import { NAV_LINKS } from "./../data/constants"
+import { NAV_LINKS } from "../data/constants"
 import IconLaCasetta from "./icons/IconLaCasetta"
 
 const Header = () => {
@@ -63,7 +63,7 @@ const Header = () => {
          </div>
          {/* BACKDROP */}
          <div
-            className={`${sideDrawer && "backdrop"}`}
+            className={sideDrawer ? "backdrop" : ""}
             onClick={handleBackdrop}
          />
       </header>

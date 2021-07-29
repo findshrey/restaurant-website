@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Image, CloudinaryContext } from "cloudinary-react"
 
-import firebase from "./../../firebase/firebase"
+import firebase from "../../firebase/firebase"
 
 const Gallery = () => {
    const [galleryImages, setGalleryImages] = useState([])
@@ -21,6 +21,9 @@ const Gallery = () => {
             })
 
             setGalleryImages(data)
+         })
+         .catch((e) => {
+            console.log(e)
          })
    }, [])
 

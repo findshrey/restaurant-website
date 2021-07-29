@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import firebase from "./../../firebase/firebase"
+import firebase from "../../firebase/firebase"
 
 // Filter dishes by category
 const filterMenu = (menu, filterBy) => {
@@ -30,6 +30,9 @@ const Menu = () => {
             })
 
             setMenu(data)
+         })
+         .catch((e) => {
+            console.log(e)
          })
    }, [])
 
