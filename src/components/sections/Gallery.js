@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { Image, CloudinaryContext } from 'cloudinary-react'
+import React, { useState, useEffect } from "react"
+import { Image, CloudinaryContext } from "cloudinary-react"
 
-import firebase from './../../firebase/firebase'
+import firebase from "./../../firebase/firebase"
 
 const Gallery = () => {
    const [galleryImages, setGalleryImages] = useState([])
@@ -10,13 +10,18 @@ const Gallery = () => {
    useEffect(() => {
       let data = []
 
-      firebase.firestore().collection('gallery').orderBy('id', 'asc').get().then((snapshot) => {
-         snapshot.docs.forEach((doc) => {
-            data = [...data, doc.data()]
-         })
+      firebase
+         .firestore()
+         .collection("gallery")
+         .orderBy("id", "asc")
+         .get()
+         .then((snapshot) => {
+            snapshot.docs.forEach((doc) => {
+               data = [...data, doc.data()]
+            })
 
-         setGalleryImages(data)
-      })
+            setGalleryImages(data)
+         })
    }, [])
 
    return (
@@ -26,18 +31,16 @@ const Gallery = () => {
             <h2>Gallery</h2>
          </header>
          <CloudinaryContext cloudName="dg4arvkpw" className="gallery-inner">
-            {
-               galleryImages.map((image) => (
-                  <div key={image.id} className="gallery-img">
-                     <Image
-                        publicId={image.id}
-                        loading="lazy"
-                        srcSet={`${image.sm} 600w, ${image.md} 1200w`}
-                        sizes="(max-width: 800px) 100vw, 35vw"
-                     />
-                  </div>
-               ))
-            }
+            {galleryImages.map((image) => (
+               <div key={image.id} className="gallery-img">
+                  <Image
+                     publicId={image.id}
+                     loading="lazy"
+                     srcSet={`${image.sm} 600w, ${image.md} 1200w`}
+                     sizes="(max-width: 800px) 100vw, 35vw"
+                  />
+               </div>
+            ))}
          </CloudinaryContext>
       </section>
    )

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 
-import firebase from './../../firebase/firebase'
+import firebase from "./../../firebase/firebase"
 
 // Filter dishes by category
 const filterMenu = (menu, filterBy) => {
@@ -14,19 +14,23 @@ const filterMenu = (menu, filterBy) => {
 const Menu = () => {
    const [menu, setMenu] = useState({})
    const [activeBtn, setActiveBtn] = useState(0)
-   const [selectedCategory, setSelectedCategory] = useState('appetizers')
+   const [selectedCategory, setSelectedCategory] = useState("appetizers")
 
    // Get menu from firebase and set state
    useEffect(() => {
       let data = {}
 
-      firebase.firestore().collection('menu').get().then((snapshot) => {
-         snapshot.docs.forEach((doc) => {
-            data = { ...data, ...doc.data() }
-         })
+      firebase
+         .firestore()
+         .collection("menu")
+         .get()
+         .then((snapshot) => {
+            snapshot.docs.forEach((doc) => {
+               data = { ...data, ...doc.data() }
+            })
 
-         setMenu(data)
-      })
+            setMenu(data)
+         })
    }, [])
 
    // Set active button
@@ -52,32 +56,29 @@ const Menu = () => {
                <h2>Restaurant Menu</h2>
             </header>
             <nav className="menu-nav">
-               {
-                  menuCategories.map((category, index) => (
-                     <button
-                        key={index}
-                        className={index === activeBtn ? 'active' : ''}
-                        onClick={() => { handleActiveBtn(index); handleCategory(category) }}
-                     >
-                        {category}
-                     </button>
-                  ))
-               }
+               {menuCategories.map((category, index) => (
+                  <button
+                     key={index}
+                     className={index === activeBtn ? "active" : ""}
+                     onClick={() => {
+                        handleActiveBtn(index)
+                        handleCategory(category)
+                     }}
+                  >
+                     {category}
+                  </button>
+               ))}
             </nav>
             <ul className="menu-items">
-               {
-                  filteredItems.map((item, index) => (
-                     <li className="item" key={index} >
-                        <div className="item-title">
-                           <span className="item-name">{item.name}</span>
-                           <span className="item-price">{item.price}</span>
-                        </div>
-                        <div className="item-description">
-                           {item.description}
-                        </div>
-                     </li>
-                  ))
-               }
+               {filteredItems.map((item, index) => (
+                  <li className="item" key={index}>
+                     <div className="item-title">
+                        <span className="item-name">{item.name}</span>
+                        <span className="item-price">{item.price}</span>
+                     </div>
+                     <div className="item-description">{item.description}</div>
+                  </li>
+               ))}
             </ul>
          </div>
       </section>

@@ -1,29 +1,29 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react"
 
-import Header from './Header'
-import Showcase from './sections/Showcase'
-import About from './sections/About'
-import Features from './sections/Features'
-import Menu from './sections/Menu'
-import Gallery from './sections/Gallery'
-import Reservation from './sections/Reservation'
-import Footer from './Footer'
+import About from "./sections/About"
+import Features from "./sections/Features"
+import Footer from "./Footer"
+import Gallery from "./sections/Gallery"
+import Header from "./Header"
+import Menu from "./sections/Menu"
+import Reservation from "./sections/Reservation"
+import Showcase from "./sections/Showcase"
 
 const App = () => {
    // Setup Intersection Observer
    useEffect(() => {
-      const sections = document.querySelectorAll('.section-fade-in')
+      const sections = document.querySelectorAll(".section-fade-in")
 
       const options = {
          root: null,
-         rootMargin: '0px',
-         threshold: 0.1
+         rootMargin: "0px",
+         threshold: 0.1,
       }
 
       const callback = (entries, observer) => {
          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-               entry.target.style.animation = 'sectionFadeIn 1s ease forwards'
+               entry.target.style.animation = "sectionFadeIn 1s ease forwards"
                observer.unobserve(entry.target)
             }
          })
