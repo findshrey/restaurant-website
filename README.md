@@ -25,11 +25,11 @@ An Italian restaurant website, hosted with [Netlify](https://www.netlify.com).
    ```sh
    npm run dev
    ```
-   
+
    Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
    You can start editing the page by modifying `src/index.js`. The page auto-updates as you edit the file.
-   
+
 ## Building for Production
 
 1. Generate a full static production build
@@ -37,7 +37,7 @@ An Italian restaurant website, hosted with [Netlify](https://www.netlify.com).
    ```sh
    npm run build
    ```
-   
+
 ## LICENSE
 
 The [MIT](LICENSE) License
