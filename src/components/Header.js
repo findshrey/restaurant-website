@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import * as FaIcons from "react-icons/fa"
 
 import { NAV_LINKS } from "../data/constants"
-import IconLaCasetta from "./icons/IconLaCasetta"
+import IconLaCasetta from "../icons/IconLaCasetta"
 
 const Header = () => {
    const [headerClass, setHeaderClass] = useState("main-head")
