@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const IconLaCasetta = () => {
    return (
@@ -8,7 +8,7 @@ const IconLaCasetta = () => {
          height="20"
          fill="none"
          viewBox="0 0 117 20"
-      // className="logo"
+         // className="logo"
       >
          <path
             id="logo-text"

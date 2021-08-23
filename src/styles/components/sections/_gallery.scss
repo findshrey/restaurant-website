@@ -15,17 +15,16 @@
    }
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
    .gallery-inner {
       grid-template-columns: 1fr;
 
       .gallery-img:first-child,
       .gallery-img:nth-child(3),
-      .gallery-img:nth-child(4), 
-      .gallery-img:nth-child(6), 
-      .gallery-img:nth-child(7), 
-      .gallery-img:nth-child(8)
-      {
+      .gallery-img:nth-child(4),
+      .gallery-img:nth-child(6),
+      .gallery-img:nth-child(7),
+      .gallery-img:nth-child(8) {
          display: none;
       }
    }

@@ -2,7 +2,7 @@
 .main-head {
    position: fixed;
    width: 100%;
-   padding: 3rem 0;   
+   padding: 3rem 0;
    z-index: 100;
    transition: all 0.4s ease-in-out;
 
@@ -125,4 +125,4 @@
    }
 }
 
-// Z-index priority : Header -> Hamburger -> Navigation -> Backdrop 
+// Z-index priority : Header -> Hamburger -> Navigation -> Backdrop

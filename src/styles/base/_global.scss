@@ -1,5 +1,7 @@
 // Global Styles
-*, *::before, *::after {
+*,
+*::before,
+*::after {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -32,7 +34,14 @@ h3 {
    font-size: $h3;
 }
 
-div, span, p, a, li, button, label, input {
+div,
+span,
+p,
+a,
+li,
+button,
+label,
+input {
    font-size: $font-m;
 }
 
