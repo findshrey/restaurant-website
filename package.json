@@ -11,24 +11,24 @@
    "author": "Shrey Sharma",
    "license": "ISC",
    "devDependencies": {
-      "@babel/core": "^7.11.6",
-      "@babel/preset-env": "^7.11.5",
-      "@babel/preset-react": "^7.10.4",
-      "babel-loader": "^8.1.0",
+      "@babel/core": "^7.15.0",
+      "@babel/preset-env": "^7.15.0",
+      "@babel/preset-react": "^7.14.5",
+      "babel-loader": "^8.2.2",
       "babel-plugin-transform-class-properties": "^6.24.1",
       "css-loader": "^4.3.0",
-      "mini-css-extract-plugin": "^0.11.2",
+      "mini-css-extract-plugin": "^0.11.3",
       "node-sass": "^4.14.1",
-      "sass-loader": "^10.0.2",
-      "webpack": "^4.44.1",
+      "sass-loader": "^10.2.0",
+      "webpack": "^4.46.0",
       "webpack-cli": "^3.3.12",
-      "webpack-dev-server": "^3.11.0"
+      "webpack-dev-server": "^3.11.2"
    },
    "dependencies": {
-      "cloudinary-react": "^1.6.7",
-      "firebase": "^8.2.7",
-      "react": "^16.13.1",
-      "react-dom": "^16.13.1",
-      "react-icons": "^4.1.0"
+      "cloudinary-react": "^1.7.0",
+      "firebase": "^8.10.0",
+      "react": "^16.14.0",
+      "react-dom": "^16.14.0",
+      "react-icons": "^4.2.0"
    }
 }
